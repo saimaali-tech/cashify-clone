@@ -8,7 +8,6 @@ import InputBase from '@mui/material/InputBase';
 import Menu from '@mui/material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 
-
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -16,9 +15,9 @@ const Search = styled('div')(({ theme }) => ({
   '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
-  marginRight: theme.spacing(2),
+  marginRight: theme.spacing(4),
   marginLeft: 0,
-  width: '100%',
+  width: '50%',
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(3),
     width: 'auto',
