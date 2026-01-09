@@ -20,19 +20,20 @@
   align-items: center;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+.search-container {
+    flex: 4; /* takes remaining space  */
+   border-radius: 8px solid black;
+  height: 40px;
+  width: 80px;
+  align-items: center; 
+justify-content: center; 
 }
 
-.nav-links li a {
-  text-decoration: none;
-  color: #e5e7eb;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+.search-input {
+  padding: 20px;
+ font-size: 0.95rem;
 }
 
-.nav-links li a:hover {
-  color: #38bdf8;
+.search-input::placeholder {
+  color: black;
 }

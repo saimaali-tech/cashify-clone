@@ -19,6 +19,13 @@ export default function Navbar() {
             priority
           />
         </Link>
+           <div className="search-container">
+          <input
+            type="text"
+            placeholder="Search..."
+            className="search-input"
+          />
+        </div>
     </nav>
     </header>
   );
