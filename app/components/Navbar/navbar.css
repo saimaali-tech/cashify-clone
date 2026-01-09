@@ -1,10 +1,9 @@
 .header {
   width: 100%;
-  /* background-color: #0f172a; */
 }
 
 .navbar {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
   padding: 1rem 2rem;
   display: flex;
@@ -13,27 +12,38 @@
 }
 
 .logo {
+  
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: bold;
     display: flex;
   align-items: center;
 }
-
-.search-container {
-    flex: 4; /* takes remaining space  */
-   border-radius: 8px solid black;
-  height: 40px;
-  width: 80px;
-  align-items: center; 
-justify-content: center; 
+/* Search bar container */
+.search-box {
+  width: 900px;
+  height: 52px;
+  border-radius: 2px solid black; /* rectangle, not pill */
+  /* padding: 0 12px; */
+  background-color: gainsboro;
 }
 
+/* Icon */
+.search-icon {
+  font-size: 1rem;
+  color: black;
+  margin-right: 8px;
+  padding: 2%;
+}
+
+/* Input */
 .search-input {
-  padding: 20px;
- font-size: 0.95rem;
-}
-
-.search-input::placeholder {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
   color: black;
 }
+
+

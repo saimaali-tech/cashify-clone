@@ -13,19 +13,26 @@ export default function Navbar() {
         <Link href="/" className="logo">
           <Image
             src="/image563.jpg"   // ✅ NO "public"
-            alt="MyApp Logo"
+            alt="Logo"
             width={90}
             height={40}
             priority
           />
         </Link>
-           <div className="search-container">
+             {/* Search Bar */}
+        <div className="search-box">
+          <span className="search-icon">🔍</span>
           <input
             type="text"
-            placeholder="Search..."
+            placeholder="Search for mobiles , accessories "
             className="search-input"
           />
         </div>
+
+
+      
+
+
     </nav>
     </header>
   );
