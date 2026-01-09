@@ -7,6 +7,7 @@ import Toolbar from '@mui/material/Toolbar';
 import InputBase from '@mui/material/InputBase';
 import Menu from '@mui/material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import Typography from '@mui/material/Typography'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -116,7 +117,9 @@ export default function PrimarySearchAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
+        <Typography variant="h1" color="initial">home</Typography>
         <Toolbar>
+          
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
