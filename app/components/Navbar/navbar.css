@@ -3,7 +3,7 @@
 }
 
 .navbar {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
   padding: 1rem 2rem;
   display: flex;
@@ -45,5 +45,19 @@
   font-size: 0.95rem;
   color: black;
 }
+
+/* Region */
+.region {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: black;
+  font-size: 0.9rem;
+}
+
+.region-icon {
+  font-size: 1rem;
+}
+
 
 
