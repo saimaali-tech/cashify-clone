@@ -5,6 +5,7 @@ import Link from "next/link";
 import "./navbar.css";
 import Button from '@mui/material/Button';
 import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
+import SearchIcon from '@mui/icons-material/Search';
 
 export default function Navbar() {
   return (
@@ -37,8 +38,7 @@ export default function Navbar() {
          <span className="region-text">Gurgaon</span>
         </div>
           <Button variant="outlined">login</Button>
-          <div></div>
-         
+        
         
 
 
