@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import "./navbar.css";
 import Button from '@mui/material/Button';
+import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
 
 export default function Navbar() {
   return (
@@ -31,10 +32,13 @@ export default function Navbar() {
           />
         </div>
          <div className="region">
-       
+          
+         <LocationOnSharpIcon></LocationOnSharpIcon>
          <span className="region-text">Gurgaon</span>
         </div>
           <Button variant="outlined">login</Button>
+          <div></div>
+         
         
 
 
