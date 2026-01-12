@@ -3,7 +3,7 @@
 import Image from "next/image";  
 import Link from "next/link";
 import "./navbar.css";
-import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import Button from '@mui/material/Button';
 
 export default function Navbar() {
   return (
@@ -34,6 +34,8 @@ export default function Navbar() {
        
          <span className="region-text">Gurgaon</span>
         </div>
+          <Button variant="outlined">login</Button>
+        
 
 
       
