@@ -5,7 +5,7 @@ import Link from "next/link";
 import "./navbar.css";
 import Button from '@mui/material/Button';
 import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
-import MegaDropdown from "../MegaDropdown";
+
 
 
 export default function Navbar() {
@@ -42,7 +42,7 @@ export default function Navbar() {
         
        </nav>
        
-         <MegaDropdown></MegaDropdown>
+     
 
     </header>
   );
