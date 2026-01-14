@@ -41,7 +41,7 @@ export default function Navbar() {
           <Button variant="outlined">login</Button>
         
        </nav>
-       {/* <MegaDropdown></MegaDropdown> */}
+       <MegaDropdown></MegaDropdown>
 
     </header>
   );
