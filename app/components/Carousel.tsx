@@ -17,6 +17,7 @@ export default function Carousel() {
       pagination={{ clickable: true }}
       autoplay={{ delay: 3000 }}
       loop={true}
+        
     >
       <SwiperSlide>
        <img src="/docker.png" />
@@ -26,9 +27,7 @@ export default function Carousel() {
       <img src="/aws2.jpeg" />
       </SwiperSlide>
 
-      {/* <SwiperSlide>
-       <img src="/images/aws3.jpeg" />
-      </SwiperSlide> */}
+   
        <SwiperSlide>
        <img src="/docker.png" />
       </SwiperSlide>
@@ -36,10 +35,6 @@ export default function Carousel() {
       <SwiperSlide>
       <img src="/aws2.jpeg" />
       </SwiperSlide>
-
-      {/* <SwiperSlide>
-       <img src="/images/aws3.jpeg" />
-      </SwiperSlide> */}
 
     </Swiper>
   );

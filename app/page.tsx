@@ -1,9 +1,9 @@
-import Navbar from './components/Navbar/navbar'
+import Carousel from './components/Carousel';
 
 export default function Home() {
   return (
-    <main>
-      {/* <Navbar/> */}
+    <main className="page-center">
+    <Carousel/>
     </main>
   );
 }
