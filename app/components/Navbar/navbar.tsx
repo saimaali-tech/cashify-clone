@@ -43,8 +43,9 @@ export default function Navbar() {
         
        </nav>
        <MegaDropdown></MegaDropdown>
+ </header>
+    
 
-    </header>
     
   );
 }
