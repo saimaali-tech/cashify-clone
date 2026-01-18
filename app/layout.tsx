@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "./components/Navbar/navbar";
+import Carousel from "./components/Carousel";
 
 export default function RootLayout({
   children,
@@ -10,6 +11,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
+        <Carousel/>
         
         {children}
       </body>
