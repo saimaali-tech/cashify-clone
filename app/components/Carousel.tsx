@@ -19,7 +19,7 @@ export default function Carousel() {
       loop={true}
     >
       <SwiperSlide>
-        <img src="/images/slide1.jpg" alt="Slide 1" />
+        <img src="" alt="Slide 1" />
       </SwiperSlide>
 
       <SwiperSlide>
