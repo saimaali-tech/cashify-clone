@@ -6,6 +6,7 @@ import "./navbar.css";
 import Button from '@mui/material/Button';
 import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
 import MegaDropdown from "../MegaDropdown"
+import Carousel from "../Carousel"
 
 
 export default function Navbar() {
@@ -44,5 +45,6 @@ export default function Navbar() {
        <MegaDropdown></MegaDropdown>
 
     </header>
+    
   );
 }
