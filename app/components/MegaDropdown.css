@@ -1,0 +1,69 @@
+.mega-nav {
+  background-color: #f8f8f8;
+  padding: 10px 0;
+  text-align: center; /* Centers the nav if needed */
+}
+
+.mega-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centers the items horizontally */
+  gap: 20px; /* Spacing between dropdown items */
+}
+
+.mega-nav-item {
+  position: relative; /* Required for absolute positioning of dropdown */
+}
+
+.mega-nav-trigger {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mega-nav-trigger:hover {
+  background-color: #e0e0e0;
+}
+
+.mega-dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Positions directly below the trigger */
+  left: 0;
+  width: 600px; /* Mega width - adjust as needed */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 10; /* Ensures it overlays other content */
+}
+
+.mega-nav-item:hover .mega-dropdown-content {
+  display: block; /* Show on hover */
+}
+
+.mega-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns - adjust for more/less */
+  gap: 20px; /* Spacing inside the dropdown */
+}
+
+
+
+.mega-column h3 {
+  margin-top: 0;
+}
+
+.mega-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mega-column li {
+  margin-bottom: 10px;
+}
