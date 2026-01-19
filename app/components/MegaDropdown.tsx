@@ -1,88 +1,48 @@
-// "use client";
+'use client'; // Optional: If using App Router and need any client-side JS (not required here)
 
-// import { useState } from "react";
-// import {
-//   Menu,
-//   MenuItem,
-//   Box,
-//   Grid,
-//   Typography,
-//   Button,
-// } from "@mui/material";
-// import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import React from 'react';
+import './MegaDropdown.css'; // Import the CSS (create this file next)
 
-// const menuData: Record<string, string[]> = {
-//   ALL: ["Phones", "Laptops", "Accessories", "Tablets"],
-//   "Sell Phone": ["Apple", "Samsung", "Xiaomi", "OnePlus"],
-//   "Sell Gadgets": ["Smart Watch", "Tablet", "Headphones", "Camera"],
-//   "Buy Refurbished Devices": ["Refurb Phones", "Refurb Laptops"],
-//   "Find New Gadgets": ["Latest Phones", "Trending Gadgets"],
-//   "Buy Laptops": ["MacBook", "Dell", "HP", "Lenovo"],
-//   "Cashify Store": ["Nearby Stores", "Offers"],
-//   More: ["Help Center", "Support"],
-// };
+const MegaDropdown = () => {
+  return (
+    <nav className="mega-nav">
+      <ul className="mega-nav-list">
+        {[...Array(8)].map((_, index) => (
+          <li key={index} className="mega-nav-item">
+            <a href="#" className="mega-nav-trigger">
+              Dropdown {index + 1}
+            </a>
+            <div className="mega-dropdown-content">
+              {/* Example mega content: Grid with columns */}
+              <div className="mega-grid">
+                <div className="mega-column">
+                  <h3>Section 1</h3>
+                  <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                  </ul>
+                </div>
+                <div className="mega-column">
+                  <h3>Section 2</h3>
+                  <ul>
+                    <li><a href="#">Link A</a></li>
+                    <li><a href="#">Link B</a></li>
+                    <li><a href="#">Link C</a></li>
+                  </ul>
+                </div>
+                <div className="mega-column">
+                  <h3>Section 3</h3>
+                  <p>Some descriptive text or image here.</p>
+                  {/* Optional: Add images with next/image */}
+                </div>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
 
-
-// export default function MegaDropdown() {
-//   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-//   const [activeMenu, setActiveMenu] = useState<string>("");
-
-//   const handleOpen = (event: React.MouseEvent<HTMLElement>, menu: string) => {
-//     setAnchorEl(event.currentTarget);
-//     setActiveMenu(menu);
-//   };
-
-//   const handleClose = () => {
-//     setAnchorEl(null);
-//     setActiveMenu("");
-//   };
-
-//   return (
-//     <Box display="flex" gap={2}>
-//       {Object.keys(menuData).map((menu) => (
-//         <Box key={menu}>
-//           <Button
-//             onMouseEnter={(e) => handleOpen(e, menu)}
-//             endIcon={<KeyboardArrowDownIcon />}
-//             sx={{
-//               color: "#fff",
-//               textTransform: "none",
-//               fontSize: "0.9rem",
-//             }}
-//           >
-//             {menu}
-//           </Button>
-
-//           <Menu
-//             anchorEl={anchorEl}
-//             open={activeMenu === menu}
-//             onClose={handleClose}
-//             MenuListProps={{
-//               onMouseLeave: handleClose,
-//             }}
-//             anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-//             transformOrigin={{ vertical: "top", horizontal: "left" }}
-//             PaperProps={{
-//               sx: {
-//                 width: 600,
-//                 padding: 2,
-//               },
-//             }}
-//           >
-//             <Grid container spacing={2}>
-//               {menuData[menu].map((item) => (
-//                 <Grid item xs={3} key={item}>
-//                   <MenuItem onClick={handleClose}>
-//                     <Typography fontSize="0.85rem">
-//                       {item}
-//                     </Typography>
-//                   </MenuItem>
-//                 </Grid>
-//               ))}
-//             </Grid>
-//           </Menu>
-//         </Box>
-//       ))}
-//     </Box>
-//   );
-// }
+export default MegaDropdown;
