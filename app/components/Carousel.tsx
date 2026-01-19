@@ -12,9 +12,9 @@ import 'swiper/css/pagination';
 const ImageCarousel = () => {
   // Array of image paths from public folder
   const images = [
-    'images/aws.jpeg',
-    'images/docker.png',
-    'images/aws2.jpeg',
+    '/images/aws.jpeg',
+    '/images/docker.png',
+    '/images/aws2.jpeg',
     // Add more paths as needed
   ];
 
