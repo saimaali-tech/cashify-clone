@@ -15,6 +15,9 @@ const ImageCarousel = () => {
     '/images/aws.jpeg',
     '/images/docker.png',
     '/images/aws2.jpeg',
+    '/images/aws.jpeg',
+    '/images/docker.png',
+    '/images/aws2.jpeg',
     // Add more paths as needed
   ];
 
