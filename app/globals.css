@@ -26,12 +26,15 @@ body {
 }
 
 .carousel-container {
-  max-width: 800px; /* Adjust to your desired carousel width */
+  max-width: 900px; /* Adjust to your desired carousel width */
   margin: 0 auto; /* Centers the container horizontally with equal left/right space */
 }
 
 .carousel-image {
+ 
   display: block;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto; /* Ensures the image itself is centered within the slide */
   object-fit: cover; /* Optional: Covers the slide area without distortion */
 }
