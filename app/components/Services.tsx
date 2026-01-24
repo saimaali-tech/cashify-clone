@@ -23,6 +23,27 @@ const services = [
     description: "AWS, Azure & Google Cloud deployment & architecture",
     icon: "☁️",
   },
+  // Added 4 more cards
+  {
+    title: "UI/UX Design",
+    description: "Intuitive and user-centered design for all platforms",
+    icon: "🎨",
+  },
+  {
+    title: "API Development",
+    description: "Secure and scalable backend APIs with REST or GraphQL",
+    icon: "🔌",
+  },
+  {
+    title: "DevOps Services",
+    description: "CI/CD pipelines, automation, and infrastructure as code",
+    icon: "⚙️",
+  },
+  {
+    title: "AI Integration",
+    description: "Machine learning models and AI features for smart applications",
+    icon: "🤖",
+  },
 ];
 
 export default function Services() {
