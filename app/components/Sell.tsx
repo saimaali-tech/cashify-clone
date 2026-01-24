@@ -1,4 +1,5 @@
 // components/Sell.tsx
+'use client'; // Add this to make it a Client Component
 
 import React, { useState } from 'react';
 
