@@ -43,7 +43,7 @@ const MegaDropdown = () => {
               All
             </Link>
           </Box> */}
-          <Box
+          {/* <Box
             component="li"
             sx={{ position: 'relative', marginRight: '20px' }}
           >
@@ -58,102 +58,39 @@ const MegaDropdown = () => {
               Sell Phone ▼
             </Link>
             {open && (
-              <ClickAwayListener onClickAway={handleClickAway}>
-                <Box
-                  sx={{
-                    position: 'absolute',
-                    top: '100%',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    width: '80vw', // Reduced from 100vw to make it smaller
-                    maxWidth: '1200px', // Max width to prevent it from being too wide
-                    maxHeight: '80vh', // Limit height to 80% of viewport
-                    overflowY: 'auto', // Scroll if content overflows
-                    backgroundColor: '#e6f7f4', // Light mint green
-                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-                    padding: '20px',
-                    zIndex: 1000,
-                    display: 'flex',
-                    borderRadius: '8px', // Optional: rounded corners
-                  }}
-                >
-                  <Box sx={{ width: '25%', paddingRight: '20px' }}> {/* Slightly wider left menu for balance */}
-                    <Box component="ul" sx={{ listStyle: 'none', padding: 0 }}>
-                      <Box component="li" sx={{ marginBottom: '10px' }}>
-                        <Link href="#" underline="hover" color="text.primary" fontSize="16px">
-                          Sell
-                        </Link>
-                      </Box>
-                      <Box component="li" sx={{ marginBottom: '10px' }}>
-                        <Link href="#" underline="hover" color="text.primary" fontSize="16px">
-                          Phone
-                        </Link>
-                      </Box>
-                      <Box component="li" sx={{ marginBottom: '10px' }}>
-                        <Link href="#" underline="hover" color="text.primary" fontSize="16px">
-                          Laptop
-                        </Link>
-                      </Box>
-                      <Box component="li" sx={{ marginBottom: '10px' }}>
-                        <Link href="#" underline="hover" color="text.primary" fontSize="16px">
-                          Smartwatch
-                        </Link>
-                      </Box>
-                      <Box component="li" sx={{ marginBottom: '10px' }}>
-                        <Link href="#" underline="hover" color="text.primary" fontSize="16px">
-                          Tablet
-                        </Link>
-                      </Box>
-                      <Box component="li" sx={{ marginBottom: '10px' }}>
-                        <Link href="#" underline="hover" color="text.primary" fontSize="16px">
-                          More
-                        </Link>
-                      </Box>
-                      <Box component="li" sx={{ marginBottom: '10px' }}>
-                        <Link href="#" underline="hover" color="text.primary" fontSize="16px">
-                          Repair
-                        </Link>
-                      </Box>
-                      <Box component="li" sx={{ marginBottom: '10px' }}>
-                        <Link href="#" underline="hover" color="text.primary" fontSize="16px">
-                          Sell Gadgets
-                        </Link>
-                      </Box>
-                      <Box component="li" sx={{ marginBottom: '10px' }}>
-                        <Link href="#" underline="hover" color="text.primary" fontSize="16px">
-                          Buy Gadgets
-                        </Link>
-                      </Box>
-                      <Box component="li" sx={{ marginBottom: '10px' }}>
-                        <Link href="#" underline="hover" color="text.primary" fontSize="16px">
-                          Recycle
-                        </Link>
-                      </Box>
-                      <Box component="li" sx={{ marginBottom: '10px' }}>
-                        <Link href="#" underline="hover" color="text.primary" fontSize="16px">
-                          Find New Phone
-                        </Link>
-                      </Box>
-                      <Box component="li" sx={{ marginBottom: '10px' }}>
-                        <Link href="#" underline="hover" color="text.primary" fontSize="16px">
-                          Cashify Store
-                        </Link>
-                      </Box>
-                    </Box>
-                  </Box>
-                  <Box sx={{ width: '75%', backgroundColor: '#e6f7f4', padding: '20px', textAlign: 'center' }}>
-                    <Typography variant="h5" color="#007bff" sx={{ marginBottom: '10px' }}>
-                      Pixel Upgrade Program
-                    </Typography>
-                    <Typography variant="h6" color="text.primary">
-                      Google Pixel every year
-                    </Typography>
+              // <ClickAwayListener onClickAway={handleClickAway}>
+              //   <Box
+              //     sx={{
+              //       position: 'absolute',
+              //       top: '100%',
+              //       left: '50%',
+              //       transform: 'translateX(-50%)',
+              //       width: '80vw', // Reduced from 100vw to make it smaller
+              //       maxWidth: '1200px', // Max width to prevent it from being too wide
+              //       maxHeight: '80vh', // Limit height to 80% of viewport
+              //       overflowY: 'auto', // Scroll if content overflows
+              //       backgroundColor: '#e6f7f4', // Light mint green
+              //       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+              //       padding: '20px',
+              //       zIndex: 1000,
+              //       display: 'flex',
+              //       borderRadius: '8px', // Optional: rounded corners
+              //     }}
+              //   >
+                  
+              //     <Box sx={{ width: '75%', backgroundColor: '#e6f7f4', padding: '20px', textAlign: 'center' }}>
+              //       <Typography variant="h5" color="#007bff" sx={{ marginBottom: '10px' }}>
+              //         Pixel Upgrade Program
+              //       </Typography>
+              //       <Typography variant="h6" color="text.primary">
+              //         Google Pixel every year
+              //       </Typography>
                 
-                  </Box>
-                </Box>
-              </ClickAwayListener>
+              //     </Box>
+              //   </Box>
+              // </ClickAwayListener>
             )}
-          </Box>
+          </Box> */}
           <Box component="li" sx={{ marginRight: '30px' }}>
             <Link href="#" underline="none" color="text.primary" fontWeight="bold" sx={{ padding: '10px' }}>
               Sell Gadgets ▼
