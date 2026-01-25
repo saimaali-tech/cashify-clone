@@ -111,7 +111,7 @@ export default function Sell() {
                 Click to view additional devices
               </p>
               <p className="text-xl font-bold text-blue-600">
-                Show More
+                Sell More
               </p>
             </div>
           )}
