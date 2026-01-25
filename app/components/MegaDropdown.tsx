@@ -148,7 +148,7 @@ const MegaDropdown = () => {
                       Google Pixel every year
                     </Typography>
                     <Grid container spacing={2} justifyContent="center" sx={{ marginTop: '20px' }}>
-                      <Grid item>
+                      {/* <Grid item>
                         <Card sx={{ maxWidth: 100 }}>
                           <CardMedia
                             component="img"
@@ -157,8 +157,8 @@ const MegaDropdown = () => {
                             alt="Pixel 1"
                           />
                         </Card>
-                      </Grid>
-                      <Grid item>
+                      </Grid> */}
+                      {/* <Grid item>
                         <Card sx={{ maxWidth: 100 }}>
                           <CardMedia
                             component="img"
@@ -167,8 +167,8 @@ const MegaDropdown = () => {
                             alt="Pixel 2"
                           />
                         </Card>
-                      </Grid>
-                      <Grid item>
+                      </Grid> */}
+                      {/* <Grid item>
                         <Card sx={{ maxWidth: 100 }}>
                           <CardMedia
                             component="img"
@@ -177,8 +177,8 @@ const MegaDropdown = () => {
                             alt="Pixel 3"
                           />
                         </Card>
-                      </Grid>
-                      <Grid item>
+                      </Grid> */}
+                      {/* <Grid item>
                         <Card sx={{ maxWidth: 100 }}>
                           <CardMedia
                             component="img"
@@ -187,11 +187,11 @@ const MegaDropdown = () => {
                             alt="Pixel 4"
                           />
                         </Card>
-                      </Grid>
+                      </Grid> */}
                     </Grid>
                     {/* Optional cards below the banner */}
                     <Grid container spacing={3} justifyContent="space-around" sx={{ marginTop: '20px' }}>
-                      <Grid item xs={12} sm={6} md={3}>
+                      {/* <Grid item xs={12} sm={6} md={3}>
                         <Card>
                           <CardMedia
                             component="img"
@@ -203,8 +203,8 @@ const MegaDropdown = () => {
                             <Typography variant="body2">Sell Phone</Typography>
                           </CardContent>
                         </Card>
-                      </Grid>
-                      <Grid item xs={12} sm={6} md={3}>
+                      </Grid> */}
+                      {/* <Grid item xs={12} sm={6} md={3}>
                         <Card>
                           <CardMedia
                             component="img"
@@ -216,8 +216,8 @@ const MegaDropdown = () => {
                             <Typography variant="body2">Sell Laptop</Typography>
                           </CardContent>
                         </Card>
-                      </Grid>
-                      <Grid item xs={12} sm={6} md={3}>
+                      </Grid> */}
+                      {/* <Grid item xs={12} sm={6} md={3}>
                         <Card>
                           <CardMedia
                             component="img"
@@ -229,8 +229,8 @@ const MegaDropdown = () => {
                             <Typography variant="body2">Repair</Typography>
                           </CardContent>
                         </Card>
-                      </Grid>
-                      <Grid item xs={12} sm={6} md={3}>
+                      </Grid> */}
+                      {/* <Grid item xs={12} sm={6} md={3}>
                         <Card>
                           <CardMedia
                             component="img"
@@ -242,7 +242,7 @@ const MegaDropdown = () => {
                             <Typography variant="body2">Cashify Store</Typography>
                           </CardContent>
                         </Card>
-                      </Grid>
+                      </Grid> */}
                     </Grid>
                   </Box>
                 </Box>
