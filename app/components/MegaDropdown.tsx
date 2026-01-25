@@ -23,9 +23,10 @@ const MegaDropdown = () => {
         sx={{
           backgroundColor: '#ffffff',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-          padding: '10px 20px',
+          padding: '10px 30px',
           display: 'flex',
           alignItems: 'center',
+          justifyContent:'center'
         }}
       >
         <Box
@@ -153,7 +154,7 @@ const MegaDropdown = () => {
               </ClickAwayListener>
             )}
           </Box>
-          <Box component="li" sx={{ marginRight: '20px' }}>
+          <Box component="li" sx={{ marginRight: '30px' }}>
             <Link href="#" underline="none" color="text.primary" fontWeight="bold" sx={{ padding: '10px' }}>
               Sell Gadgets ▼
             </Link>
