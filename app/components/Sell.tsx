@@ -57,7 +57,8 @@ const devices = [
 
 export default function Sell() {
   const [showAll, setShowAll] = useState(false);
-  const visibleDevices = showAll ? devices : devices.slice(0, 4);
+  const initialDevices = devices.slice(0, 4);
+  const allDevices = devices;
 
   return (
     <section className="py-20 px-6 bg-gray-50">
@@ -74,14 +75,14 @@ export default function Sell() {
 
         {/* Cards Container - Centered */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
-          {visibleDevices.map((device, index) => (
+          {(showAll ? allDevices : initialDevices).map((device, index) => (
             <div
               key={index}
               className="bg-white rounded-2xl shadow-lg hover:shadow-xl 
                          transition-all duration-300 p-8 text-center
                          w-full max-w-sm hover:-translate-y-2"
             >
-              <div className="text-3xl mb-6">{device.icon}</div> {/* Reduced from text-5xl to text-3xl */}
+              <div className="text-3xl mb-6">{device.icon}</div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                 {device.title}
               </h3>
@@ -93,20 +94,28 @@ export default function Sell() {
               </p>
             </div>
           ))}
-        </div>
 
-        {/* Show More Button */}
-        {!showAll && devices.length > 4 && (
-          <div className="text-center mt-12">
-            <button
+          {/* More Card - Only show if not all are visible */}
+          {!showAll && devices.length > 4 && (
+            <div
               onClick={() => setShowAll(true)}
-              className="bg-blue-600 text-white px-8 py-3 rounded-full 
-                         font-semibold hover:bg-blue-700 transition-colors"
+              className="bg-white rounded-2xl shadow-lg hover:shadow-xl 
+                         transition-all duration-300 p-8 text-center
+                         w-full max-w-sm hover:-translate-y-2 cursor-pointer"
             >
-              Show More Devices
-            </button>
-          </div>
-        )}
+              <div className="text-3xl mb-6">➕</div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                More Devices
+              </h3>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Click to view additional devices
+              </p>
+              <p className="text-xl font-bold text-blue-600">
+                Show More
+              </p>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
