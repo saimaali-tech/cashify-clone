@@ -69,7 +69,7 @@ export default function Services() {
                          transition-all duration-300 p-8 text-center
                          w-full max-w-sm hover:-translate-y-2"
             >
-              <div className="text-5xl mb-6">{service.icon}</div>
+              <div className="text-3xl mb-6">{service.icon}</div> {/* Reduced from text-5xl to text-3xl */}
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                 {service.title}
               </h3>
