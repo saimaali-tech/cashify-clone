@@ -17,7 +17,7 @@ const MegaDropdown = () => {
   };
 
   return (
-    <Box sx={{ backgroundColor: '#f4f4f4', minHeight: '100vh' }}>
+    <Box sx={{ backgroundColor: '#f4f4f4' }}>
       <Box
         component="nav"
         sx={{
@@ -38,59 +38,8 @@ const MegaDropdown = () => {
           }}
           component="ul"
         >
-          {/* <Box component="li" sx={{ marginRight: '20px' }}>
-            <Link href="#" underline="none" color="text.primary" fontWeight="bold" sx={{ padding: '10px' }}>
-              All
-            </Link>
-          </Box> */}
-          {/* <Box
-            component="li"
-            sx={{ position: 'relative', marginRight: '20px' }}
-          >
-            <Link
-              href="#"
-              underline="none"
-              color="text.primary"
-              fontWeight="bold"
-              sx={{ padding: '10px', cursor: 'pointer' }}
-              onClick={handleClick}
-            >
-              Sell Phone ▼
-            </Link>
-            {open && (
-              // <ClickAwayListener onClickAway={handleClickAway}>
-              //   <Box
-              //     sx={{
-              //       position: 'absolute',
-              //       top: '100%',
-              //       left: '50%',
-              //       transform: 'translateX(-50%)',
-              //       width: '80vw', // Reduced from 100vw to make it smaller
-              //       maxWidth: '1200px', // Max width to prevent it from being too wide
-              //       maxHeight: '80vh', // Limit height to 80% of viewport
-              //       overflowY: 'auto', // Scroll if content overflows
-              //       backgroundColor: '#e6f7f4', // Light mint green
-              //       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-              //       padding: '20px',
-              //       zIndex: 1000,
-              //       display: 'flex',
-              //       borderRadius: '8px', // Optional: rounded corners
-              //     }}
-              //   >
-                  
-              //     <Box sx={{ width: '75%', backgroundColor: '#e6f7f4', padding: '20px', textAlign: 'center' }}>
-              //       <Typography variant="h5" color="#007bff" sx={{ marginBottom: '10px' }}>
-              //         Pixel Upgrade Program
-              //       </Typography>
-              //       <Typography variant="h6" color="text.primary">
-              //         Google Pixel every year
-              //       </Typography>
-                
-              //     </Box>
-              //   </Box>
-              // </ClickAwayListener>
-            )}
-          </Box> */}
+          
+         
           <Box component="li" sx={{ marginRight: '30px' }}>
             <Link href="#" underline="none" color="text.primary" fontWeight="bold" sx={{ padding: '10px' }}>
               Sell Gadgets ▼
