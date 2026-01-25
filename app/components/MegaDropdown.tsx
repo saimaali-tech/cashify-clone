@@ -38,11 +38,11 @@ const MegaDropdown = () => {
           }}
           component="ul"
         >
-          <Box component="li" sx={{ marginRight: '20px' }}>
+          {/* <Box component="li" sx={{ marginRight: '20px' }}>
             <Link href="#" underline="none" color="text.primary" fontWeight="bold" sx={{ padding: '10px' }}>
               All
             </Link>
-          </Box>
+          </Box> */}
           <Box
             component="li"
             sx={{ position: 'relative', marginRight: '20px' }}
