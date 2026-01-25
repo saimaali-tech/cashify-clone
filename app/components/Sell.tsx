@@ -1,5 +1,5 @@
 // components/Sell.tsx
-'use client'; // Add this to make it a Client Component
+'use client'; // Required for useState
 
 import React, { useState } from 'react';
 
@@ -81,7 +81,7 @@ export default function Sell() {
                          transition-all duration-300 p-8 text-center
                          w-full max-w-sm hover:-translate-y-2"
             >
-              <div className="text-5xl mb-6">{device.icon}</div>
+              <div className="text-3xl mb-6">{device.icon}</div> {/* Reduced from text-5xl to text-3xl */}
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                 {device.title}
               </h3>
