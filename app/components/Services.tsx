@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Typography, Box } from '@mui/material';
+import { Container, Typography, Box } from '@mui/material';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import DevicesIcon from '@mui/icons-material/Devices';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
@@ -34,27 +34,28 @@ const Services: React.FC = () => {
       <Typography variant="h3" component="h2" gutterBottom>
         Our Services
       </Typography>
-      <Grid container spacing={2} justifyContent="space-around">
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
         {services.map((service, index) => (
-          <Grid item xs={6} sm={4} md={3} lg={2} key={index}>
-            <Box
-              display="flex"
-              flexDirection="column"
-              alignItems="center"
-              p={2}
-              sx={{
-                backgroundColor: '#E0F7FA', // Light cyan background to mimic the image's style
-                borderRadius: '8px',
-              }}
-            >
-              {service.icon}
-              <Typography variant="subtitle1" mt={1}>
-                {service.name}
-              </Typography>
-            </Box>
-          </Grid>
+          <Box
+            key={index}
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              p: 2,
+              backgroundColor: '#E0F7FA',
+              borderRadius: '8px',
+              flex: '0 0 calc((100% - 112px) / 8)',
+              boxSizing: 'border-box',
+            }}
+          >
+            {service.icon}
+            <Typography variant="subtitle1" mt={1}>
+              {service.name}
+            </Typography>
+          </Box>
         ))}
-      </Grid>
+      </Box>
     </Container>
   );
 };
