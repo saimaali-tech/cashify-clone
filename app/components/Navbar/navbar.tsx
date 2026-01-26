@@ -36,7 +36,7 @@ export default function Navbar() {
         </div>
          <div className="region">
           
-         <LocationOnSharpIcon></LocationOnSharpIcon>
+        <LocationOnSharpIcon style={{ color: 'green' }} />
          <span className="region-text">Gurgaon</span>
         </div>
           <Button variant="outlined">login</Button>
