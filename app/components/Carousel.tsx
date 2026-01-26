@@ -12,12 +12,13 @@ import 'swiper/css/pagination';
 const ImageCarousel = () => {
   // Array of image paths from public folder
   const images = [
-    '/images/aws.jpeg',
-    '/images/docker.png',
-    '/images/aws2.jpeg',
-    '/images/aws.jpeg',
-    '/images/docker.png',
-    '/images/aws2.jpeg',
+    '/images/image1.jpg',
+    '/images/image3.jpg',
+    // '/images/docker.png',
+    // '/images/aws2.jpeg',
+    // '/images/aws.jpeg',
+    // '/images/docker.png',
+    // '/images/aws2.jpeg',
     // Add more paths as needed
   ];
 
@@ -38,8 +39,8 @@ const ImageCarousel = () => {
             <Image
               src={src}
               alt={`Image ${index + 1}`}
-              width={800} // Adjust based on your image size
-              height={400}
+              width={2100} // Adjust based on your image size
+              height={900}
               className="carousel-image"
             />
           </SwiperSlide>
