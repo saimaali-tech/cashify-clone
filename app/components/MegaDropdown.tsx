@@ -33,8 +33,7 @@ const MegaDropdown = () => {
           sx={{
             display: 'flex',
             listStyle: 'none',
-            margin: 0,
-            padding: 0,
+          
           }}
           component="ul"
         >
