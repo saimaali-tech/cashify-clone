@@ -16,7 +16,7 @@ interface Device {
 
 const devices: Device[] = [
   {
-    image: '/placeholder-vivo-x90-pro.jpg',
+    image: '/images/phone1.jpg',
     off: '₹56,000 OFF',
     name: 'Vivo X90 Pro - Refurbished',
     sale: 'Republic Day Sale',
@@ -27,7 +27,7 @@ const devices: Device[] = [
     withGold: '₹37,729 with GGLD',
   },
   {
-    image: '/placeholder-xiaomi-redmi-9i.jpg',
+    image: '/images/phone2.jpg',
     off: '₹1,400 OFF',
     name: 'Xiaomi Redmi 9i - Refurbished',
     sale: 'Republic Day Sale',
@@ -38,7 +38,7 @@ const devices: Device[] = [
     withGold: '₹4,801 with GGLD',
   },
   {
-    image: '/placeholder-xiaomi-redmi-note-11-pro-plus.jpg',
+    image: '/images/phone3.jpg',
     off: '₹13,700 OFF',
     name: 'Xiaomi Redmi Note 11 Pro Plus 5G - Refurbished',
     sale: 'Republic Day Sale',
@@ -49,7 +49,7 @@ const devices: Device[] = [
     withGold: '₹9,799 with GGLD',
   },
   {
-    image: '/placeholder-xiaomi-redmi-9-power.jpg',
+    image: '/images/phone4.jpg',
     off: '₹4,700 OFF',
     name: 'Xiaomi Redmi 9 Power - Refurbished',
     sale: 'Republic Day Sale',
@@ -60,7 +60,7 @@ const devices: Device[] = [
     withGold: '₹5,291 with GGLD',
   },
   {
-    image: '/placeholder-oneplus-nord-ce-2-lite.jpg',
+    image: '/images/phone5.jpg',
     off: '₹15,000 OFF',
     name: 'OnePlus Nord CE 2 Lite 5G - Refurbished',
     sale: 'Republic Day Sale',
