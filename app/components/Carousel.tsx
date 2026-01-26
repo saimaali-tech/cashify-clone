@@ -28,7 +28,7 @@ const ImageCarousel = () => {
         slidesPerView={1} // Show one slide at a time (adjust for more, e.g., 3 for multiple visible)
         navigation // Enables arrow navigation
         pagination={{ clickable: true }} // Enables dot pagination
-        autoplay={{ delay: 3000, disableOnInteraction: false }} // Optional auto-slide every 3s
+        autoplay={{ delay: 4000, disableOnInteraction: false }} // Optional auto-slide every 3s
         loop={true} // Infinite loop
       >
         {images.map((src, index) => (
