@@ -1,85 +1,62 @@
-// components/Services.tsx
-
 import React from 'react';
+import { Container, Grid, Typography, Box } from '@mui/material';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import DevicesIcon from '@mui/icons-material/Devices';
+import SmartphoneIcon from '@mui/icons-material/Smartphone';
+import LaptopIcon from '@mui/icons-material/Laptop';
+import BuildIcon from '@mui/icons-material/Build';
+import SearchIcon from '@mui/icons-material/Search';
+import StoreIcon from '@mui/icons-material/Store';
+import WatchIcon from '@mui/icons-material/Watch';
+import RecyclingIcon from '@mui/icons-material/Recycling';
 
-const services = [
-  {
-    title: "Web Development",
-    description: "Responsive websites & web applications using React, Next.js & Tailwind",
-    icon: "🌐",
-  },
-  {
-    title: "Mobile Apps",
-    description: "Native & Cross-platform mobile apps for iOS and Android",
-    icon: "📱",
-  },
-  {
-    title: "Desktop Applications",
-    description: "Powerful desktop software for Windows, Mac & Linux",
-    icon: "💻",
-  },
-  {
-    title: "Cloud Solutions",
-    description: "AWS, Azure & Google Cloud deployment & architecture",
-    icon: "☁️",
-  },
-  // Added 4 more cards
-  {
-    title: "UI/UX Design",
-    description: "Intuitive and user-centered design for all platforms",
-    icon: "🎨",
-  },
-  {
-    title: "API Development",
-    description: "Secure and scalable backend APIs with REST or GraphQL",
-    icon: "🔌",
-  },
-  {
-    title: "DevOps Services",
-    description: "CI/CD pipelines, automation, and infrastructure as code",
-    icon: "⚙️",
-  },
-  {
-    title: "AI Integration",
-    description: "Machine learning models and AI features for smart applications",
-    icon: "🤖",
-  },
+interface Service {
+  name: string;
+  icon: React.ReactNode;
+}
+
+const services: Service[] = [
+  { name: 'Sell Phone', icon: <AttachMoneyIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Buy Gadgets', icon: <DevicesIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Buy Phone', icon: <SmartphoneIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Buy Laptops', icon: <LaptopIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Repair Phone', icon: <BuildIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Repair Laptop', icon: <BuildIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Find New Phone', icon: <SearchIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Nearby Stores', icon: <StoreIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Buy Smartwatches', icon: <WatchIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Recycle', icon: <RecyclingIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
 ];
 
-export default function Services() {
+const Services: React.FC = () => {
   return (
-    <section className="py-20 px-6 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our Services
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We build high-quality solutions for different devices and platforms
-          </p>
-        </div>
-
-        {/* Cards Container - Centered */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl 
-                         transition-all duration-200 p-8 text-center
-                         w-full max-w-sm hover:-translate-y-2"
+    <Container maxWidth="xl" sx={{ my: 4 }}>
+      <Typography variant="h3" component="h2" gutterBottom>
+        Our Services
+      </Typography>
+      <Grid container spacing={2} justifyContent="space-around">
+        {services.map((service, index) => (
+          <Grid item xs={6} sm={4} md={3} lg={2} key={index}>
+            <Box
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              p={2}
+              sx={{
+                backgroundColor: '#E0F7FA', // Light cyan background to mimic the image's style
+                borderRadius: '8px',
+              }}
             >
-              <div className="text-3xl mb-6">{service.icon}</div> {/* Reduced from text-5xl to text-3xl */}
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {service.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+              {service.icon}
+              <Typography variant="subtitle1" mt={1}>
+                {service.name}
+              </Typography>
+            </Box>
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
   );
-}
+};
+
+export default Services;
