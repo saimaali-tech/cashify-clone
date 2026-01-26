@@ -61,12 +61,12 @@ export default function Services() {
         </div>
 
         {/* Cards Container - Centered */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
           {services.map((service, index) => (
             <div
               key={index}
               className="bg-white rounded-2xl shadow-lg hover:shadow-xl 
-                         transition-all duration-300 p-8 text-center
+                         transition-all duration-200 p-8 text-center
                          w-full max-w-sm hover:-translate-y-2"
             >
               <div className="text-3xl mb-6">{service.icon}</div> {/* Reduced from text-5xl to text-3xl */}
