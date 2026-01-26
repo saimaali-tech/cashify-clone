@@ -39,8 +39,8 @@ const ImageCarousel = () => {
             <Image
               src={src}
               alt={`Image ${index + 1}`}
-              width={2100} // Adjust based on your image size
-              height={900}
+              width={3000} // Adjust based on your image size
+              height={1000}
               className="carousel-image"
             />
           </SwiperSlide>
