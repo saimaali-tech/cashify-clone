@@ -14,19 +14,16 @@ const ImageCarousel = () => {
   const images = [
     '/images/image1.jpg',
     '/images/image3.jpg',
-    // '/images/docker.png',
-    // '/images/aws2.jpeg',
-    // '/images/aws.jpeg',
-    // '/images/docker.png',
-    // '/images/aws2.jpeg',
-    // Add more paths as needed
+     '/images/image1.jpg',
+    '/images/image3.jpg',
+  
   ];
 
   return (
     <div className="carousel-container">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
-        spaceBetween={30} // Space between slides
+        spaceBetween={60} // Space between slides
         centeredSlides={true} // Centers the active slide
         slidesPerView={1} // Show one slide at a time (adjust for more, e.g., 3 for multiple visible)
         navigation // Enables arrow navigation
@@ -39,7 +36,7 @@ const ImageCarousel = () => {
             <Image
               src={src}
               alt={`Image ${index + 1}`}
-              width={3000} // Adjust based on your image size
+              width={4000} // Adjust based on your image size
               height={1000}
               className="carousel-image"
             />
