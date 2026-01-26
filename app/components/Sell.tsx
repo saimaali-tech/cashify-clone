@@ -1,122 +1,62 @@
 // components/Sell.tsx
-'use client'; // Required for useState
+'use client'; 
+import React from 'react';
+import { Container, Typography, Box } from '@mui/material';
+import SmartphoneIcon from '@mui/icons-material/Smartphone';
+import LaptopIcon from '@mui/icons-material/Laptop';
+import TvIcon from '@mui/icons-material/Tv';
+import TabletIcon from '@mui/icons-material/Tablet';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import WatchIcon from '@mui/icons-material/Watch';
+import SpeakerIcon from '@mui/icons-material/Speaker';
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
-import React, { useState } from 'react';
+interface Service {
+  name: string;
+  icon: React.ReactNode;
+}
 
-const devices = [
-  {
-    title: "Smartphone Pro",
-    description: "High-end smartphone with 5G, 128GB storage, and triple camera",
-    price: "$799",
-    icon: "📱",
-  },
-  {
-    title: "Laptop Ultra",
-    description: "Powerful laptop with Intel i7, 16GB RAM, and 512GB SSD",
-    price: "$1299",
-    icon: "💻",
-  },
-  {
-    title: "Wireless Earbuds",
-    description: "Noise-cancelling earbuds with 24-hour battery life",
-    price: "$149",
-    icon: "🎧",
-  },
-  {
-    title: "Smart Watch",
-    description: "Fitness tracker with heart rate monitor and GPS",
-    price: "$199",
-    icon: "⌚",
-  },
-  // Additional devices for "Show More"
-  {
-    title: "Tablet Max",
-    description: "10-inch tablet with stylus support and 256GB storage",
-    price: "$499",
-    icon: "📱",
-  },
-  {
-    title: "Gaming Console",
-    description: "Next-gen console with 4K graphics and online multiplayer",
-    price: "$499",
-    icon: "🎮",
-  },
-  {
-    title: "Smart Home Hub",
-    description: "Voice-controlled hub for lights, security, and more",
-    price: "$99",
-    icon: "🏠",
-  },
-  {
-    title: "Drone Camera",
-    description: "4K drone with obstacle avoidance and 30-min flight time",
-    price: "$399",
-    icon: "🚁",
-  },
+const sellServices: Service[] = [
+  { name: 'Sell Phone', icon: <SmartphoneIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Sell Laptop', icon: <LaptopIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Sell TV', icon: <TvIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Sell Tablet', icon: <TabletIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Sell Gaming Consoles', icon: <SportsEsportsIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Sell Smartwatch', icon: <WatchIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Sell Smart Speakers', icon: <SpeakerIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Sell More', icon: <MoreHorizIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
 ];
 
-export default function Sell() {
-  const [showAll, setShowAll] = useState(false);
-  const initialDevices = devices.slice(0, 4);
-  const allDevices = devices;
-
+const Sell: React.FC = () => {
   return (
-    <section className="py-20 px-6 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Devices for Sale
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Browse our selection of high-quality devices
-          </p>
-        </div>
-
-        {/* Cards Container - Centered */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
-          {(showAll ? allDevices : initialDevices).map((device, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl 
-                         transition-all duration-300 p-8 text-center
-                         w-full max-w-sm hover:-translate-y-2"
-            >
-              <div className="text-3xl mb-6">{device.icon}</div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                {device.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                {device.description}
-              </p>
-              <p className="text-xl font-bold text-green-600">
-                {device.price}
-              </p>
-            </div>
-          ))}
-
-          {/* More Card - Only show if not all are visible */}
-          {!showAll && devices.length > 4 && (
-            <div
-              onClick={() => setShowAll(true)}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl 
-                         transition-all duration-300 p-8 text-center
-                         w-full max-w-sm hover:-translate-y-2 cursor-pointer"
-            >
-              <div className="text-3xl mb-6">➕</div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                More Devices
-              </h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Click to view additional devices
-              </p>
-              <p className="text-xl font-bold text-blue-600">
-                Sell More
-              </p>
-            </div>
-          )}
-        </div>
-      </div>
-    </section>
+    <Container maxWidth="xl" sx={{ my: 4 }}>
+      <Typography variant="h3" component="h2" gutterBottom>
+        Sell Your Old Device Now
+      </Typography>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+        {sellServices.map((service, index) => (
+          <Box
+            key={index}
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              p: 2,
+              backgroundColor: '#E0F7FA',
+              borderRadius: '8px',
+              flex: '0 0 calc((100% - 112px) / 8)',
+              boxSizing: 'border-box',
+            }}
+          >
+            {service.icon}
+            <Typography variant="subtitle1" mt={1}>
+              {service.name}
+            </Typography>
+          </Box>
+        ))}
+      </Box>
+    </Container>
   );
-}
+};
+
+export default Sell;
