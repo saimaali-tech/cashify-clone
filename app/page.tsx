@@ -6,7 +6,7 @@ import Refirbished from './components/Refirbished'
 
 export default function Home() {
   return (
-    <main className="container">
+    <main className="page-center">
     <Carousel/>
     <Services />
     <Sell/>

@@ -1,40 +1,50 @@
 import React from 'react';
-import { Container, Typography, Box } from '@mui/material';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-import DevicesIcon from '@mui/icons-material/Devices';
-import SmartphoneIcon from '@mui/icons-material/Smartphone';
-import LaptopIcon from '@mui/icons-material/Laptop';
-import BuildIcon from '@mui/icons-material/Build';
-import SearchIcon from '@mui/icons-material/Search';
-import StoreIcon from '@mui/icons-material/Store';
-import WatchIcon from '@mui/icons-material/Watch';
-import RecyclingIcon from '@mui/icons-material/Recycling';
+import Image from 'next/image';
+import {
+  Container,
+  Typography,
+  Box,
+  Card,
+} from '@mui/material';
 
 interface Service {
   name: string;
-  icon: React.ReactNode;
+  imageSrc: string;
 }
 
 const services: Service[] = [
-  { name: 'Sell Phone', icon: <AttachMoneyIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
-  { name: 'Buy Gadgets', icon: <DevicesIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
-  { name: 'Buy Phone', icon: <SmartphoneIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
-  { name: 'Buy Laptops', icon: <LaptopIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
-  { name: 'Repair Phone', icon: <BuildIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
-  { name: 'Repair Laptop', icon: <BuildIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
-  { name: 'Find New Phone', icon: <SearchIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
-  { name: 'Nearby Stores', icon: <StoreIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
-  { name: 'Buy Smartwatches', icon: <WatchIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
-  { name: 'Recycle', icon: <RecyclingIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Sell Phone', imageSrc: '/images/service1.jpg' },
+  { name: 'Buy Gadgets', imageSrc: '/images/service2.jpg' },
+  { name: 'Buy Phone', imageSrc: '/images/service3.jpg' },
+  { name: 'Buy Laptops', imageSrc: '/images/service4.jpg' },
+  { name: 'Repair Phone', imageSrc: '/images/service5.jpg' },
+  { name: 'Repair Laptop', imageSrc: '/images/service6.jpg' },
+  { name: 'Find New Phone', imageSrc: '/images/service7.jpg' },
+  { name: 'Nearby Stores', imageSrc: '/images/service8.jpg' },
+  { name: 'Buy Smartwatches', imageSrc: '/images/service9.jpg' },
+  { name: 'Recycle', imageSrc: '/images/service10.jpg' },
 ];
 
 const Services: React.FC = () => {
   return (
-    <Container maxWidth="xl" sx={{ my: 4 }}>
-      <Typography variant="h3" component="h2" gutterBottom>
+    <Container maxWidth="xl" sx={{ my: 6 }}>
+      <Typography variant="h2" component="h2" gutterBottom align="center">
         Our Services
       </Typography>
-      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: {
+            xs: 'repeat(2, 1fr)',
+            sm: 'repeat(3, 1fr)',
+            md: 'repeat(4, 1fr)',
+            lg: 'repeat(5, 1fr)',
+          },
+          gap: 4,
+          justifyItems: 'center',
+        }}
+      >
         {services.map((service, index) => (
           <Box
             key={index}
@@ -42,15 +52,45 @@ const Services: React.FC = () => {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              p: 2,
-              backgroundColor: '#E0F7FA',
-              borderRadius: '8px',
-              flex: '0 0 calc((100% - 112px) / 8)',
-              boxSizing: 'border-box',
+              textAlign: 'center',
+              maxWidth: 160, // Keeps each item compact
             }}
           >
-            {service.icon}
-            <Typography variant="subtitle1" mt={1}>
+            <Card
+              elevation={4}
+              sx={{
+                borderRadius: 3, // Slightly rounded square (or '50%' for circle)
+                overflow: 'hidden',
+                width: 120,
+                height: 120,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  transform: 'scale(1.08)',
+                  boxShadow: 8,
+                },
+              }}
+            >
+              <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
+                <Image
+                  src={service.imageSrc}
+                  alt={`${service.name} service`}
+                  fill
+                  style={{ objectFit: 'contain', padding: '12px' }} // Padding for breathing room inside card
+                  sizes="120px"
+                  priority={index < 4} // Preload first few
+                />
+              </Box>
+            </Card>
+
+            <Typography
+              variant="subtitle1"
+              fontWeight="medium"
+              mt={2}
+              color="text.primary"
+            >
               {service.name}
             </Typography>
           </Box>
