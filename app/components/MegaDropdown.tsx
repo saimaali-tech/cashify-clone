@@ -23,7 +23,7 @@ const MegaDropdown = () => {
         sx={{
           backgroundColor: '#ffffff',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-          padding: '10px 30px',
+          padding: '20px 40px',
           display: 'flex',
           alignItems: 'center',
           justifyContent:'center'
@@ -38,7 +38,11 @@ const MegaDropdown = () => {
           component="ul"
         >
           
-         
+          <Box component="li" sx={{ marginRight: '30px' }}>
+            <Link href="#" underline="none" color="text.primary" fontWeight="bold" sx={{ padding: '10px' }}>
+              All ▼
+            </Link>
+          </Box>
           <Box component="li" sx={{ marginRight: '30px' }}>
             <Link href="#" underline="none" color="text.primary" fontWeight="bold" sx={{ padding: '10px' }}>
               Sell Gadgets ▼
