@@ -29,8 +29,8 @@ const services: Service[] = [
 
 const Services: React.FC = () => {
   return (
-    <Container maxWidth="xl" sx={{ my: 4 }}>
-      <Typography variant="h2" component="h2" gutterBottom align="center">
+    <Container maxWidth="xl" sx={{ my: 6 }}>
+      <Typography variant="h3" component="h2" gutterBottom align="center">
         Our Services
       </Typography>
 
@@ -43,7 +43,7 @@ const Services: React.FC = () => {
             md: 'repeat(4, 1fr)',     // 4 on medium
             lg: 'repeat(5, 1fr)',     // 5 on large
           },
-          gap: 2, // Better spacing
+          gap: 3, // Better spacing
         }}
       >
         {services.map((service, index) => (
@@ -56,7 +56,7 @@ const Services: React.FC = () => {
               alignItems: 'center',
               textAlign: 'center',
               p: 3,
-              borderRadius: 2,
+              borderRadius: 3,
               transition: 'transform 0.2s',
               '&:hover': {
                 transform: 'translateY(-8px)',
@@ -64,7 +64,7 @@ const Services: React.FC = () => {
               },
             }}
           >
-            <Box sx={{ position: 'relative', width: 90, height: 90, mb: 1}}>
+            <Box sx={{ position: 'relative', width: 100, height: 100, mb: 2 }}>
               <Image
                 src={service.imageSrc}
                 alt={`${service.name} service icon`}
