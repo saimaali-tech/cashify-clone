@@ -56,7 +56,7 @@ const Services: React.FC = () => {
               alignItems: 'center',
               textAlign: 'center',
               p: 3,
-              borderRadius: 3,
+              borderRadius: 2,
               transition: 'transform 0.2s',
               '&:hover': {
                 transform: 'translateY(-8px)',
