@@ -4,6 +4,7 @@ import  Sell from './components/Sell'
 import Refirbished from './components/Refirbished'
 
 
+
 export default function Home() {
   return (
     <main className="container">
@@ -11,6 +12,7 @@ export default function Home() {
     <Services />
     <Sell/>
     <Refirbished/>
+   
     </main>
   );
 }
