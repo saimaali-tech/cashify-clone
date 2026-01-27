@@ -1,9 +1,7 @@
 'use client'; // Use this for client-side interactivity in Next.js App Router
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import Image from 'next/image';
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -14,15 +12,22 @@ const ImageCarousel = () => {
   const images = [
     '/images/image1.jpg',
     '/images/image3.jpg',
-     '/images/image1.jpg',
+    '/images/image1.jpg',
     '/images/image3.jpg',
-     '/images/image1.jpg',
+    '/images/image1.jpg',
     '/images/image3.jpg',
-  
   ];
 
   return (
-    <div className="carousel-container">
+    <div 
+      className="carousel-container"
+      style={{
+        width: '100%',
+        maxWidth: '1450px', // Optional: cap max width on very large screens
+        margin: '0 auto',   // Center the carousel
+        position: 'relative',
+      }}
+    >
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={60} // Space between slides
@@ -32,16 +37,40 @@ const ImageCarousel = () => {
         pagination={{ clickable: true }} // Enables dot pagination
         autoplay={{ delay: 4000, disableOnInteraction: false }} // Optional auto-slide every 3s
         loop={true} // Infinite loop
+        style={{
+          width: '100%',
+          height: 'auto', // No fixed height
+        }}
       >
         {images.map((src, index) => (
-          <SwiperSlide key={index}>
-            <Image
-              src={src}
-              alt={`Image ${index + 1}`}
-              width={1000} // Adjust based on your image size
-              height={900}
-              className="carousel-image"
-            />
+          <SwiperSlide 
+            key={index}
+            style={{
+              width: '100%',
+              height: 'auto',
+              position: 'relative', // Required for fill images
+            }}
+          >
+            <div 
+              style={{
+                position: 'relative',
+                width: '100%',
+                paddingTop: '36.25%', // 16:9 aspect ratio (adjust as needed: e.g., 75% for 4:3)
+              }}
+            >
+              <Image
+                src={src}
+                alt={`Image ${index + 1}`}
+                fill
+                className="carousel-image"
+                style={{
+                  objectFit: 'contain', // Full image visible (use 'cover' to fill/crop)
+                  objectPosition: 'center',
+                }}
+                sizes="(max-width: 700px) 100vw, 1200px" // Responsive image sizing
+                priority={index === 0} // Preload first image
+              />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
