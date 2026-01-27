@@ -1,0 +1,37 @@
+.phones {
+  padding: 40px;
+}
+
+.phones h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.phones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.phone-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  background: #fff;
+  transition: transform 0.2s ease;
+}
+
+.phone-card:hover {
+  transform: translateY(-5px);
+}
+
+.phone-image {
+  object-fit: contain;
+}
+
+.price {
+  color: #16a34a;
+  font-weight: 600;
+  margin-top: 8px;
+}
