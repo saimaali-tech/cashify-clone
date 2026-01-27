@@ -41,7 +41,7 @@ const Sell: React.FC = () => {
             md: 'repeat(4, 1fr)',    // 4 on medium
             lg: 'repeat(5, 1fr)',    // 5 on large (adjust if needed)
           },
-          gap: 4,
+          gap: 2,
           justifyItems: 'center',
         }}
       >
@@ -53,7 +53,7 @@ const Sell: React.FC = () => {
               flexDirection: 'column',
               alignItems: 'center',
               textAlign: 'center',
-              maxWidth: 160,
+              maxWidth: 180,
             }}
           >
             <Card
@@ -61,8 +61,8 @@ const Sell: React.FC = () => {
               sx={{
                 borderRadius: 3, // Rounded square; change to '50%' for circle
                 overflow: 'hidden',
-                width: 120,
-                height: 120,
+                width: 140,
+                height: 140,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',

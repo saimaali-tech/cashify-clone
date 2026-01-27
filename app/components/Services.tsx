@@ -27,7 +27,7 @@ const services: Service[] = [
 
 const Services: React.FC = () => {
   return (
-    <Container maxWidth="xl" sx={{ my: 6 }}>
+    <Container maxWidth="xl" sx={{ my: 4 }}>
       <Typography variant="h2" component="h2" gutterBottom align="center">
         Our Services
       </Typography>
@@ -36,13 +36,15 @@ const Services: React.FC = () => {
         sx={{
           display: 'grid',
           gridTemplateColumns: {
-            xs: 'repeat(2, 1fr)',
-            sm: 'repeat(3, 1fr)',
-            md: 'repeat(4, 1fr)',
-            lg: 'repeat(5, 1fr)',
+            xs: 'repeat(2, 1fr)',      // 2 columns on mobile
+            sm: 'repeat(3, 1fr)',       // 3 on small tablets
+            md: 'repeat(4, 1fr)',       // 4 on medium screens
+            lg: 'repeat(8, minmax(0, 1fr))',  // 8 columns on large screens → 8 in first row, 2 in second
+            xl: 'repeat(8, minmax(0, 1fr))',
           },
-          gap: 4,
+          gap: { xs: 2, md: 3 },
           justifyItems: 'center',
+          alignContent: 'start', // prevents stretching
         }}
       >
         {services.map((service, index) => (
@@ -52,17 +54,17 @@ const Services: React.FC = () => {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              textAlign: 'center',
-              maxWidth: 160, // Keeps each item compact
+              maxWidth: 150,
+              width: '100%',
             }}
           >
             <Card
-              elevation={4}
+              elevation={3}
               sx={{
-                borderRadius: 3, // Slightly rounded square (or '50%' for circle)
+                borderRadius: 3,
                 overflow: 'hidden',
-                width: 120,
-                height: 120,
+                width: 150,
+                height: 150,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -78,9 +80,9 @@ const Services: React.FC = () => {
                   src={service.imageSrc}
                   alt={`${service.name} service`}
                   fill
-                  style={{ objectFit: 'contain', padding: '12px' }} // Padding for breathing room inside card
-                  sizes="120px"
-                  priority={index < 4} // Preload first few
+                  style={{ objectFit: 'contain', padding: '12px' }}
+                  sizes="(max-width: 600px) 140px, 150px"
+                  priority={index < 4}
                 />
               </Box>
             </Card>
@@ -90,6 +92,7 @@ const Services: React.FC = () => {
               fontWeight="medium"
               mt={2}
               color="text.primary"
+              align="center"
             >
               {service.name}
             </Typography>
