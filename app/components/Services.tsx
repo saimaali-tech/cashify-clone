@@ -1,84 +1,59 @@
 import React from 'react';
-import Image from 'next/image'; // ← Import this
-import {
-  Container,
-  Typography,
-  Box,
-  Card,
-  CardContent,
-  CardMedia, // Optional: if you want image as background/top
-} from '@mui/material';
+import { Container, Typography, Box } from '@mui/material';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import DevicesIcon from '@mui/icons-material/Devices';
+import SmartphoneIcon from '@mui/icons-material/Smartphone';
+import LaptopIcon from '@mui/icons-material/Laptop';
+import BuildIcon from '@mui/icons-material/Build';
+import SearchIcon from '@mui/icons-material/Search';
+import StoreIcon from '@mui/icons-material/Store';
+import WatchIcon from '@mui/icons-material/Watch';
+import RecyclingIcon from '@mui/icons-material/Recycling';
 
 interface Service {
   name: string;
-  imageSrc: string; // Path relative to /public (starts with /)
+  icon: React.ReactNode;
 }
 
 const services: Service[] = [
-  { name: 'Sell Phone', imageSrc: '/images/service1.jpg' },
-  { name: 'Buy Gadgets', imageSrc: '/images/service2.jpg' },
-  { name: 'Buy Phone', imageSrc: '/images/service3.jpg' },
-  { name: 'Buy Laptops', imageSrc: '/images/service4.jpg' },
-  { name: 'Repair Phone', imageSrc: '/images/service5.jpg' },
-  { name: 'Repair Laptop', imageSrc: '/images/service6.jpg' },
-  { name: 'Find New Phone', imageSrc: '/images/service7.jpg' },
-  { name: 'Nearby Stores', imageSrc: '/images/service8.jpg' },
-  { name: 'Buy Smartwatches', imageSrc: '/images/service9.jpg' },
-  { name: 'Recycle', imageSrc: '/images/service10.jpg' },
+  { name: 'Sell Phone', icon: <AttachMoneyIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Buy Gadgets', icon: <DevicesIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Buy Phone', icon: <SmartphoneIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Buy Laptops', icon: <LaptopIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Repair Phone', icon: <BuildIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Repair Laptop', icon: <BuildIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Find New Phone', icon: <SearchIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Nearby Stores', icon: <StoreIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Buy Smartwatches', icon: <WatchIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
+  { name: 'Recycle', icon: <RecyclingIcon sx={{ fontSize: 80, color: 'primary.main' }} /> },
 ];
 
 const Services: React.FC = () => {
   return (
-    <Container maxWidth="xl" sx={{ my: 6 }}>
-      <Typography variant="h3" component="h2" gutterBottom align="center">
+    <Container maxWidth="xl" sx={{ my: 4 }}>
+      <Typography variant="h3" component="h2" gutterBottom>
         Our Services
       </Typography>
-
-      <Box
-        sx={{
-          display: 'grid',
-          gridTemplateColumns: {
-            xs: 'repeat(2, 1fr)',    // 2 columns on mobile
-            sm: 'repeat(3, 1fr)',     // 3 on small tablets
-            md: 'repeat(4, 1fr)',     // 4 on medium
-            lg: 'repeat(5, 1fr)',     // 5 on large
-          },
-          gap: 3, // Better spacing
-        }}
-      >
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
         {services.map((service, index) => (
-          <Card
+          <Box
             key={index}
-            elevation={3} // Slight shadow for depth
             sx={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              textAlign: 'center',
-              p: 3,
-              borderRadius: 3,
-              transition: 'transform 0.2s',
-              '&:hover': {
-                transform: 'translateY(-8px)',
-                boxShadow: 6,
-              },
+              p: 2,
+              backgroundColor: '#E0F7FA',
+              borderRadius: '8px',
+              flex: '0 0 calc((100% - 112px) / 8)',
+              boxSizing: 'border-box',
             }}
           >
-            <Box sx={{ position: 'relative', width: 100, height: 100, mb: 2 }}>
-              <Image
-                src={service.imageSrc}
-                alt={`${service.name} service icon`}
-                fill
-                style={{ objectFit: 'contain' }} // Keeps aspect ratio, no cropping
-                sizes="100px" // Helps with responsive optimization
-                priority={index < 6} // Optional: preload first few for faster LCP
-              />
-            </Box>
-
-            <Typography variant="subtitle1" fontWeight="bold">
+            {service.icon}
+            <Typography variant="subtitle1" mt={1}>
               {service.name}
             </Typography>
-          </Card>
+          </Box>
         ))}
       </Box>
     </Container>
