@@ -28,21 +28,27 @@ const Sell: React.FC = () => {
 
   return (
     <Container maxWidth="xl" sx={{ my: 6 }}>
-      <Typography variant="h3" component="h2" gutterBottom align="center">
+      <Typography variant="h3" component="h2" gutterBottom >
         Sell Your Old Device Now
       </Typography>
 
+      {/* Changed to flex for single horizontal line on large screens */}
       <Box
         sx={{
-          display: 'grid',
-          gridTemplateColumns: {
-            xs: 'repeat(2, 1fr)',   // 2 columns on mobile
-            sm: 'repeat(3, 1fr)',    // 3 on small
-            md: 'repeat(4, 1fr)',    // 4 on medium
-            lg: 'repeat(5, 1fr)',    // 5 on large (adjust if needed)
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: {
+            xs: 'wrap',   // wrap on mobile/tablet
+            lg: 'nowrap', // ONE LINE on large screens and up
           },
-          gap: 2,
-          justifyItems: 'center',
+          overflowX: {
+            lg: 'auto',   // horizontal scroll if needed on large screens
+          },
+          gap: 6,         // slightly larger gap for better spacing
+          justifyContent: 'center',
+          alignItems: 'flex-start',
+          pb: { lg: 3 },  // extra padding for scrollbar (if visible)
+          scrollSnapType: { lg: 'x mandatory' }, // optional: smooth snapping
         }}
       >
         {displayedServices.map((service, index) => (
@@ -54,12 +60,14 @@ const Sell: React.FC = () => {
               alignItems: 'center',
               textAlign: 'center',
               maxWidth: 180,
+              flex: '0 0 auto', // prevent shrinking/growing → fixed width per card
+              scrollSnapAlign: 'center', // optional: nice scroll snap
             }}
           >
             <Card
               elevation={4}
               sx={{
-                borderRadius: 3, // Rounded square; change to '50%' for circle
+                borderRadius: 3,
                 overflow: 'hidden',
                 width: 140,
                 height: 140,
@@ -78,13 +86,12 @@ const Sell: React.FC = () => {
                   src={service.imageSrc}
                   alt={`Sell ${service.name.toLowerCase()} service`}
                   fill
-                  style={{ objectFit: 'contain', padding: '12px' }} // Padding avoids edge cropping
-                  sizes="120px"
-                  priority={index < 4} // Preload first few for better LCP
+                  style={{ objectFit: 'contain', padding: '12px' }}
+                  sizes="140px"
+                  priority={index < 4}
                 />
               </Box>
             </Card>
-
             <Typography
               variant="subtitle1"
               fontWeight="medium"
@@ -104,8 +111,10 @@ const Sell: React.FC = () => {
               flexDirection: 'column',
               alignItems: 'center',
               textAlign: 'center',
-              maxWidth: 160,
+              maxWidth: 180, // made same width as others for consistency
+              flex: '0 0 auto',
               cursor: 'pointer',
+              scrollSnapAlign: 'center',
             }}
           >
             <Card
@@ -113,8 +122,8 @@ const Sell: React.FC = () => {
               sx={{
                 borderRadius: 3,
                 overflow: 'hidden',
-                width: 120,
-                height: 120,
+                width: 150, // made same size as other cards
+                height: 150,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -127,15 +136,14 @@ const Sell: React.FC = () => {
             >
               <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
                 <Image
-                  src="/images/more-services.jpg" // Add this image to public/images/
+                  src="/images/more-services.jpg"
                   alt="More devices to sell"
                   fill
                   style={{ objectFit: 'contain', padding: '12px' }}
-                  sizes="120px"
+                  sizes="140px"
                 />
               </Box>
             </Card>
-
             <Typography
               variant="subtitle1"
               fontWeight="medium"
