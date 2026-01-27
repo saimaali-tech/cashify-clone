@@ -75,7 +75,7 @@ const devices: Device[] = [
 const Devices: React.FC = () => {
   return (
     <Container maxWidth="xl" sx={{ my: 4 }}>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 6 }}>
         <Typography variant="h4" component="h2">
           Buy Refurbished Devices
         </Typography>
@@ -83,9 +83,9 @@ const Devices: React.FC = () => {
           View All
         </Typography>
       </Box>
-      <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, flexWrap: 'wrap' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', gap: 7, flexWrap: 'wrap' }}>
         {devices.map((device, index) => (
-          <Card key={index} sx={{ width: 200, position: 'relative' }}>
+          <Card key={index} sx={{ width: 250, position: 'relative' }}>
             <Box sx={{ position: 'absolute', top: 8, left: 8, backgroundColor: '#E0F7FA', borderRadius: '50%', p: 1 }}>
               <CircleIcon sx={{ color: 'green' }} /> {/* Placeholder for CASHIFY Assured */}
             </Box>

@@ -38,4 +38,6 @@ body {
   margin: 0 auto; /* Ensures the image itself is centered within the slide */
   object-fit: cover; /* Optional: Covers the slide area without distortion */
 }
-
+*{
+  
+}
