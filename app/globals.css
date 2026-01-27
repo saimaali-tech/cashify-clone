@@ -38,6 +38,10 @@ body {
   margin: 0 auto; /* Ensures the image itself is centered within the slide */
   object-fit: cover; /* Optional: Covers the slide area without distortion */
 }
-*{
-  
+
+.container {
+  max-width: 1900px;      
+  /* width: 100%;                full width up to the max */
+  margin: 0 auto;             
+  padding: 0 1rem;           
 }
