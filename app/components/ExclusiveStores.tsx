@@ -35,7 +35,7 @@ const ExclusiveStores = () => {
   ];
 
   return (
-    <div className="container">
+    <div className="store">
       <div className="header">
         <h1>Our Exclusive Stores</h1>
         <a href="#" className="view-all">View all stores</a>
