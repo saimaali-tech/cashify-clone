@@ -3,6 +3,7 @@ import  Services from './components/Services'
 import  Sell from './components/Sell'
 import Refirbished from './components/Refirbished'
 import RefurbishedLaptops from './components/RefurbishedLaptops'
+import ExclusiveStores from './components/ExclusiveStores';
 
 
 
@@ -14,6 +15,7 @@ export default function Home() {
     <Sell/>
     <Refirbished/>
     <RefurbishedLaptops/>
+    <ExclusiveStores/>
    
     </main>
   );
