@@ -49,7 +49,7 @@ const RefurbishedLaptops = () => {
   ];
 
   return (
-    <div className="box">
+    <div className="laptop">
       <h1>Refurbished Laptops</h1>
       <div className="laptop-grid">
         {laptops.map((laptop, index) => (
