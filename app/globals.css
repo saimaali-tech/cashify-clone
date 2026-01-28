@@ -55,7 +55,7 @@ body {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 20px;
 }
 
@@ -71,7 +71,7 @@ h1 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 15px;
   text-align: center;
-  width: 24%;
+  width: 26%;
   position: relative;
 }
 
