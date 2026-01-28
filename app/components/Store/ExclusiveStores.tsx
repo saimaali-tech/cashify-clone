@@ -1,4 +1,5 @@
-import Image from 'next/image'; // If needed for icons, but not used here
+
+import "./exclusivestore.module.css";
 
 const ExclusiveStores = () => {
   const stores = [
