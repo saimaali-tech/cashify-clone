@@ -1,6 +1,5 @@
 import Image from 'next/image';
-import '';
-
+import "./refurbishedlaptops.css"
 const RefurbishedLaptops = () => {
   const laptops = [
     {
