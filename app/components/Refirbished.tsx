@@ -76,7 +76,7 @@ const Devices: React.FC = () => {
   return (
     <Container maxWidth="xl" sx={{ my: 4 }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 6 }}>
-        <Typography variant="h4" component="h2">
+        <Typography variant="h3" component="h2">
           Buy Refurbished Devices
         </Typography>
         <Typography variant="body1" color="primary" sx={{ cursor: 'pointer' }}>

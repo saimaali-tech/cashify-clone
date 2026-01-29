@@ -40,7 +40,7 @@ const StoreCards = () => {
   ];
 
   return (
-    <div style={{ backgroundColor: '#f5f5f5', padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
+    <div style={{ backgroundColor: '#f5f5f5', padding: '20px', maxWidth: '1400px', margin: '0 auto' }}>
       <Grid container justifyContent="space-between" alignItems="center" spacing={2}>
         <Grid item>
           <Typography variant="h5" fontWeight="bold">
