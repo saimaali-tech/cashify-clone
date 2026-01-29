@@ -46,3 +46,7 @@ body {
   padding: 0 1rem;           
 }
 
+.common-width {
+  width: 500px; /* Adjust this value as needed, e.g., 100%, 80vw, etc. */
+  max-width: 100%; /* Optional: Prevent overflow on smaller screens */
+}

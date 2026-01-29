@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import "./refurbishedlaptops.css"
+
 const RefurbishedLaptops = () => {
   const laptops = [
     {
@@ -49,7 +50,7 @@ const RefurbishedLaptops = () => {
   ];
 
   return (
-    <div className="laptop">
+    <div className="laptop" >
       <h1>Refurbished Laptops</h1>
       <div className="laptop-grid">
         {laptops.map((laptop, index) => (
