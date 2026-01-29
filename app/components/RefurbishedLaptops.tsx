@@ -59,8 +59,8 @@ const RefurbishedLaptops = () => {
             <Image
               src={laptop.image}
               alt={laptop.name}
-              width={300}
-              height={200}
+              width={200}
+              height={100}
               className="laptop-image"
             />
             <div className="discount">{laptop.discount}</div>

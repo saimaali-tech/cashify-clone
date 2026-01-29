@@ -49,9 +49,9 @@ body {
 /* styles/globals.css or a module CSS file */
 
 .laptop {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 5px;
 }
 
 h1 {
@@ -61,8 +61,8 @@ h1 {
 
 .laptop-grid {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  /* justify-content: space-between; */
+  gap: 15px;
 }
 
 .laptop-card {
@@ -135,6 +135,6 @@ h1 {
 }
 
 .with-gold {
-  font-size: 14px;
+  font-size: 10px;
   color: #333;
 }
