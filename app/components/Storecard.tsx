@@ -40,7 +40,7 @@ const StoreCards = () => {
   ];
 
   return (
-    <div style={{ backgroundColor: '#f5f5f5', padding: '20px' }}>
+    <div style={{ backgroundColor: '#f5f5f5', padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
       <Grid container justifyContent="space-between" alignItems="center" spacing={2}>
         <Grid item>
           <Typography variant="h5" fontWeight="bold">
@@ -83,7 +83,7 @@ const StoreCards = () => {
       <Grid container spacing={2} style={{ marginTop: '20px', overflowX: 'auto', flexWrap: 'nowrap' }}>
         {stores.map((store, index) => (
           <Grid item key={index}>
-            <Card sx={{ minWidth: 250, boxShadow: 3 }}>
+            <Card sx={{ minWidth: 200, maxWidth: 250, boxShadow: 3 }}>
               <CardContent>
                 <Chip label={store.location} color="default" sx={{ backgroundColor: 'black', color: 'white', mb: 1 }} />
                 <Typography variant="h6" fontWeight="bold">
