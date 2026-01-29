@@ -1,4 +1,4 @@
-// app/mega-dropdown/page.js (or place in your components folder and import where needed)
+
 
 'use client'; // This enables client-side rendering for interactivity
 
