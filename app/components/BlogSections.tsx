@@ -55,6 +55,7 @@ const BlogSections = () => {
                 <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>
                   {item.title}
                 </Typography>
+                
               </CardContent>
             </Card>
           ))}
