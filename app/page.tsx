@@ -6,6 +6,7 @@ import RefurbishedLaptops from './components/RefurbishedLaptops/RefurbishedLapto
 import StoreCards from './components/Storecard';
 import Footer from './components/Footer';
 import Testimonials from './components/Testimonials';
+import BlogSections from './components/BlogSections';
 import { Box } from '@mui/material';  // Add this import
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <RefurbishedLaptops />
       <StoreCards />
       <Testimonials/>
+      <BlogSections/>
 
       <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         {/* Header / main content */}
