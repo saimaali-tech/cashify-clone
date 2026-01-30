@@ -51,30 +51,30 @@ const Testimonials = () => {
             </Card>
           ))}
         </Box>
-        <Box sx={{ overflow: 'hidden', whiteSpace: 'nowrap', backgroundColor: '#26c6da', py: 1, mt: 4 }}>
-          <Box
-            sx={{
-              display: 'inline-block',
-              animation: 'marquee 30s linear infinite',
-              '@keyframes marquee': {
-                '0%': { transform: 'translateX(0%)' },
-                '100%': { transform: 'translateX(-50%)' },
-              },
-            }}
-          >
-            {brands.map((brand, index) => (
-              <Typography key={index} variant="h6" component="span" sx={{ mx: 2, color: '#fff' }}>
-                {brand === 'Apple' ? <AppleIcon sx={{ verticalAlign: 'middle', fontSize: '1.5em' }} /> : brand}
-              </Typography>
-            ))}
-            {brands.map((brand, index) => (
-              <Typography key={`dup-${index}`} variant="h6" component="span" sx={{ mx: 2, color: '#fff' }}>
-                {brand === 'Apple' ? <AppleIcon sx={{ verticalAlign: 'middle', fontSize: '1.5em' }} /> : brand}
-              </Typography>
-            ))}
-          </Box>
-        </Box>
       </Container>
+      <Box sx={{ overflow: 'hidden', whiteSpace: 'nowrap', backgroundColor: '#26c6da', py: 1, mt: 4 }}>
+        <Box
+          sx={{
+            display: 'inline-block',
+            animation: 'marquee 15s linear infinite',
+            '@keyframes marquee': {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            },
+          }}
+        >
+          {brands.map((brand, index) => (
+            <Typography key={index} variant="h6" component="span" sx={{ mx: 2, color: '#fff' }}>
+              {brand === 'Apple' ? <AppleIcon sx={{ verticalAlign: 'middle', fontSize: '1.5em' }} /> : brand}
+            </Typography>
+          ))}
+          {brands.map((brand, index) => (
+            <Typography key={`dup-${index}`} variant="h6" component="span" sx={{ mx: 2, color: '#fff' }}>
+              {brand === 'Apple' ? <AppleIcon sx={{ verticalAlign: 'middle', fontSize: '1.5em' }} /> : brand}
+            </Typography>
+          ))}
+        </Box>
+      </Box>
     </Box>
   );
 };
