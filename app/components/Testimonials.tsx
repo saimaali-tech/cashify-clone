@@ -7,52 +7,54 @@ const Testimonials = () => {
   const brands = ['Vivo', 'SAMSUNG', 'Apple', 'realme', 'Oppo', 'mi', 'vijay sales', 'Reliance digital', 'HP', 'Paytm', 'NOKIA'];
 
   return (
-    <Box sx={{ backgroundColor: '#000', color: '#fff', py: 6 }}>
-      <Container maxWidth="lg">
-        <Typography variant="h4" align="center" gutterBottom sx={{ fontWeight: 'bold' }}>
-          Trusted by 17.14 Lac + Happy Users and Major Brands since 2015
-        </Typography>
-        <Grid container spacing={4} justifyContent="center" sx={{ mb: 4 }}>
-          <Grid item>
-            <Typography variant="h6" align="center">
-              ₹12835.12Cr.
-            </Typography>
-            <Typography variant="body2" align="center">
-              Cash Given
-            </Typography>
+    <>
+      <Box sx={{ backgroundColor: '#000', color: '#fff', py: 6 }}>
+        <Container maxWidth="lg">
+          <Typography variant="h4" align="center" gutterBottom sx={{ fontWeight: 'bold' }}>
+            Trusted by 17.14 Lac + Happy Users and Major Brands since 2015
+          </Typography>
+          <Grid container spacing={4} justifyContent="center" sx={{ mb: 4 }}>
+            <Grid item>
+              <Typography variant="h6" align="center">
+                ₹12835.12Cr.
+              </Typography>
+              <Typography variant="body2" align="center">
+                Cash Given
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant="h6" align="center">
+                190.15Lac
+              </Typography>
+              <Typography variant="body2" align="center">
+                Gadgets Encashed
+              </Typography>
+            </Grid>
           </Grid>
-          <Grid item>
-            <Typography variant="h6" align="center">
-              190.15Lac
-            </Typography>
-            <Typography variant="body2" align="center">
-              Gadgets Encashed
-            </Typography>
-          </Grid>
-        </Grid>
-        <Box sx={{ display: 'flex', flexDirection: 'row', overflowX: 'auto', gap: 2, pb: 2 }}>
-          {testimonialsData.map((testimonial, index) => (
-            <Card key={index} sx={{ backgroundColor: '#f5f5f5', borderRadius: 2, boxShadow: 3, minWidth: 250, maxWidth: 300, flexShrink: 0 }}>
-              <CardContent>
-                <FormatQuoteIcon sx={{ color: '#00b8d4', fontSize: 40 }} />
-                <Typography variant="body1" sx={{ mt: 1, mb: 2 }}>
-                  {testimonial.quote}
-                </Typography>
-                <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <Avatar src={testimonial.avatar} sx={{ mr: 2 }} />
-                  <Box>
-                    <Typography variant="subtitle2">{testimonial.name}</Typography>
-                    <Typography variant="body2" color="textSecondary">
-                      {testimonial.location}
-                    </Typography>
+          <Box sx={{ display: 'flex', flexDirection: 'row', overflowX: 'auto', gap: 2, pb: 2 }}>
+            {testimonialsData.map((testimonial, index) => (
+              <Card key={index} sx={{ backgroundColor: '#f5f5f5', borderRadius: 2, boxShadow: 3, minWidth: 250, maxWidth: 300, flexShrink: 0 }}>
+                <CardContent>
+                  <FormatQuoteIcon sx={{ color: '#00b8d4', fontSize: 40 }} />
+                  <Typography variant="body1" sx={{ mt: 1, mb: 2 }}>
+                    {testimonial.quote}
+                  </Typography>
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Avatar src={testimonial.avatar} sx={{ mr: 2 }} />
+                    <Box>
+                      <Typography variant="subtitle2">{testimonial.name}</Typography>
+                      <Typography variant="body2" color="textSecondary">
+                        {testimonial.location}
+                      </Typography>
+                    </Box>
                   </Box>
-                </Box>
-              </CardContent>
-            </Card>
-          ))}
-        </Box>
-      </Container>
-      <Box sx={{ overflow: 'hidden', whiteSpace: 'nowrap', backgroundColor: '#26c6da', py: 1, mt: 4 }}>
+                </CardContent>
+              </Card>
+            ))}
+          </Box>
+        </Container>
+      </Box>
+      <Box sx={{ overflow: 'hidden', whiteSpace: 'nowrap', backgroundColor: '#26c6da', py: 1 }}>
         <Box
           sx={{
             display: 'inline-block',
@@ -75,7 +77,7 @@ const Testimonials = () => {
           ))}
         </Box>
       </Box>
-    </Box>
+    </>
   );
 };
 
