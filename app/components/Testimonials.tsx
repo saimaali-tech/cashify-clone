@@ -27,29 +27,27 @@ const Testimonials = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Grid container spacing={3}>
+        <Box sx={{ display: 'flex', flexDirection: 'row', overflowX: 'auto', gap: 2, pb: 2 }}>
           {testimonialsData.map((testimonial, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index}>
-              <Card sx={{ backgroundColor: '#f5f5f5', borderRadius: 2, boxShadow: 3 }}>
-                <CardContent>
-                  <FormatQuoteIcon sx={{ color: '#00b8d4', fontSize: 40 }} />
-                  <Typography variant="body1" sx={{ mt: 1, mb: 2 }}>
-                    {testimonial.quote}
-                  </Typography>
-                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <Avatar src={testimonial.avatar} sx={{ mr: 2 }} />
-                    <Box>
-                      <Typography variant="subtitle2">{testimonial.name}</Typography>
-                      <Typography variant="body2" color="textSecondary">
-                        {testimonial.location}
-                      </Typography>
-                    </Box>
+            <Card key={index} sx={{ backgroundColor: '#f5f5f5', borderRadius: 2, boxShadow: 3, minWidth: 250, maxWidth: 300, flexShrink: 0 }}>
+              <CardContent>
+                <FormatQuoteIcon sx={{ color: '#00b8d4', fontSize: 40 }} />
+                <Typography variant="body1" sx={{ mt: 1, mb: 2 }}>
+                  {testimonial.quote}
+                </Typography>
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                  <Avatar src={testimonial.avatar} sx={{ mr: 2 }} />
+                  <Box>
+                    <Typography variant="subtitle2">{testimonial.name}</Typography>
+                    <Typography variant="body2" color="textSecondary">
+                      {testimonial.location}
+                    </Typography>
                   </Box>
-                </CardContent>
-              </Card>
-            </Grid>
+                </Box>
+              </CardContent>
+            </Card>
           ))}
-        </Grid>
+        </Box>
       </Container>
     </Box>
   );
