@@ -1,24 +1,29 @@
 import Carousel from './components/Carousel';
-import  Services from './components/Services'
-import  Sell from './components/Sell'
-import Refirbished from './components/Refirbished'
+import Services from './components/Services';
+import Sell from './components/Sell';
+import Refirbished from './components/Refirbished';
 import RefurbishedLaptops from './components/RefurbishedLaptops/RefurbishedLaptops';
 import StoreCards from './components/Storecard';
-
-
-
+import Footer from './components/Footer';
+import { Box } from '@mui/material';  // Add this import
 
 export default function Home() {
   return (
     <main className="container">
-    <Carousel/>
-    <Services />
-    <Sell/>
-    <Refirbished/>
-    <RefurbishedLaptops/>
-    <StoreCards/>
-   
-   
+      <Carousel />
+      <Services />
+      <Sell />
+      <Refirbished />
+      <RefurbishedLaptops />
+      <StoreCards />
+
+      <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+        {/* Header / main content */}
+        <Box component="main" sx={{ flex: 1 }}>
+          {/* page content */}
+        </Box>
+        <Footer />
+      </Box>
     </main>
   );
 }
