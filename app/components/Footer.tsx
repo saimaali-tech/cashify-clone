@@ -164,7 +164,7 @@ const Footer = () => {
         </Grid>
 
         {/* Social icons row */}
-        <Box sx={{ mt: 5, mb: 3, textAlign: 'center' }}>
+        <Box sx={{ mt: 5, mb: 3, textAlign: 'space-between' }}>
           <Typography variant="body2" gutterBottom>
             Follow us on
           </Typography>
