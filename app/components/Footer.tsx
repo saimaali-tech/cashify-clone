@@ -35,9 +35,9 @@ const Footer = () => {
         {/* Add Logo Here - Assuming your logo file is in /public/logo.png (replace path if needed) */}
         <Box sx={{ mb: 4 }}>
           <Image
-            src="/logo.png"  // Path to your logo in the public folder (e.g., public/logo.png)
+            src="/image563.jpg"  // Path to your logo in the public folder (e.g., public/logo.png)
             alt="Cashify Logo"
-            width={150}     // Adjust width/height to match the image size/style
+            width={100}     // Adjust width/height to match the image size/style
             height={40}
             priority        // Optional: for faster loading
           />
