@@ -16,6 +16,7 @@ import {
   Instagram as InstagramIcon,
   YouTube as YouTubeIcon,
 } from '@mui/icons-material';
+import Image from 'next/image';  // Add this import for Next.js Image
 
 const Footer = () => {
   return (
@@ -31,6 +32,17 @@ const Footer = () => {
       }}
     >
       <Container maxWidth="lg">
+        {/* Add Logo Here - Assuming your logo file is in /public/logo.png (replace path if needed) */}
+        <Box sx={{ mb: 4 }}>
+          <Image
+            src="/logo.png"  // Path to your logo in the public folder (e.g., public/logo.png)
+            alt="Cashify Logo"
+            width={150}     // Adjust width/height to match the image size/style
+            height={40}
+            priority        // Optional: for faster loading
+          />
+        </Box>
+
         {/* Main links grid - 5 columns on desktop */}
         <Grid container spacing={4} justifyContent="space-between">
           {/* Column 1: Services */}
