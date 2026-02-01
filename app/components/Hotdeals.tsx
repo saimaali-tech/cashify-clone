@@ -33,22 +33,22 @@ const phoneImages = {
 const deals = [
   {
     title: 'Buyback\nOffers',
-    color: '#fff1f5', // Light pink
+    color: '#fff1f5', 
     images: phoneImages.buyback,
   },
   {
     title: 'Exchange\nOffers',
-    color: '#e0f2f1', // Light teal
+    color: '#e0f2f1', 
     images: phoneImages.exchange,
   },
   {
     title: 'Refurbished\nDevice\nOffers',
-    color: '#f3e5f5', // Light purple
+    color: '#f3e5f5', 
     images: phoneImages.refurbished,
   },
   {
     title: 'Repair\nOffers',
-    color: '#fffde7', // Light yellow
+    color: '#fffde7', 
     images: phoneImages.repair,
   },
 ];
