@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import {
   Box,
   Typography,
@@ -7,42 +9,67 @@ import {
   AccordionDetails,
   Divider,
   Link,
+  Tabs,
+  Tab,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const faqs = [
-  'What should I do if my Amazon voucher shows "Already Redeemed"?',
-  'What documents do you need to sell old mobile phone on Cashify?',
-  'What if my pickup is delayed?',
-];
+const faqData = {
+  SellSmart: [
+    'What should I do if my Amazon voucher shows "Already Redeemed"?',
+    'What documents do you need to sell old mobile phone on Cashify?',
+    'What if my pickup is delayed?',
+  ],
+  SmartBuy: [
+    'How do I exchange my old device for a new one?',
+    'What is the process for buying refurbished devices?',
+    'Are there any warranties on SmartBuy products?',
+  ],
+  'Repair/Others': [
+    'How long does a repair take?',
+    'What types of repairs do you offer?',
+    'How can I track my repair status?',
+  ],
+};
 
 const FAQSection: React.FC = () => {
+  const [selectedTab, setSelectedTab] = useState('SellSmart');
+
+  const handleTabChange = (event: React.SyntheticEvent, newValue: string) => {
+    setSelectedTab(newValue);
+  };
+
+  const faqs = faqData[selectedTab as keyof typeof faqData];
+
   return (
     <Box sx={{ p: { xs: 2, md: 4 }, bgcolor: 'white' }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
         <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
           Frequently Asked Questions
         </Typography>
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Box
-            sx={{
-              bgcolor: '#f0f0f0',
-              borderRadius: 20,
+        <Tabs
+          value={selectedTab}
+          onChange={handleTabChange}
+          sx={{
+            '& .MuiTab-root': {
+              textTransform: 'none',
+              minWidth: 'auto',
               px: 2,
               py: 0.5,
+              borderRadius: 20,
               mr: 1,
+            },
+            '& .Mui-selected': {
+              bgcolor: '#f0f0f0',
               fontWeight: 'medium',
-            }}
-          >
-            SellSmart
-          </Box>
-          <Typography variant="body1" color="text.secondary" sx={{ mr: 1 }}>
-            SmartBuy
-          </Typography>
-          <Typography variant="body1" color="text.secondary">
-            Repair/Others
-          </Typography>
-        </Box>
+            },
+            '& .MuiTabs-indicator': { display: 'none' },
+          }}
+        >
+          <Tab label="SellSmart" value="SellSmart" />
+          <Tab label="SmartBuy" value="SmartBuy" />
+          <Tab label="Repair/Others" value="Repair/Others" />
+        </Tabs>
       </Box>
 
       {faqs.map((question, index) => (
