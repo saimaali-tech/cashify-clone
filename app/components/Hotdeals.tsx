@@ -1,184 +1,143 @@
-// components/HotDealsSection.tsx
-import React, { useRef } from 'react';
+import React from 'react';
 import {
   Box,
   Typography,
-  Card,
-  CardContent,
+  Grid,
   IconButton,
-  useTheme,
+  Paper,
 } from '@mui/material';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
+// Placeholder phone images from Unsplash (resized for the card)
+// Replace with your own images if needed
+const phoneImages = {
+  buyback: [
+    'https://images.unsplash.com/photo-1745848413099-13adc3aaf308?fm=jpg&q=60&w=70&h=140&fit=crop',
+    'https://images.unsplash.com/photo-1598965402089-897ce52e8355?fm=jpg&q=60&w=70&h=140&fit=crop',
+    'https://images.unsplash.com/photo-1557576902-671136754c97?fm=jpg&q=60&w=70&h=140&fit=crop',
+  ],
+  exchange: [
+    'https://images.unsplash.com/photo-1598965402089-897ce52e8355?fm=jpg&q=60&w=70&h=140&fit=crop',
+    'https://images.unsplash.com/photo-1557576902-671136754c97?fm=jpg&q=60&w=70&h=140&fit=crop',
+  ],
+  refurbished: [
+    'https://images.unsplash.com/photo-1745848413099-13adc3aaf308?fm=jpg&q=60&w=70&h=140&fit=crop',
+    'https://images.unsplash.com/photo-1598965402089-897ce52e8355?fm=jpg&q=60&w=70&h=140&fit=crop',
+  ],
+  repair: [
+    'https://images.unsplash.com/photo-1557576902-671136754c97?fm=jpg&q=60&w=70&h=140&fit=crop',
+    'https://images.unsplash.com/photo-1598965402089-897ce52e8355?fm=jpg&q=60&w=70&h=140&fit=crop', // Replace second with a cracked phone image if desired
+  ],
+};
 
 const deals = [
   {
-    title: 'Buyback Offers',
-    color: '#ff80ab', // pinkish
-    imageUrl: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&q=80', // placeholder phones
+    title: 'Buyback\nOffers',
+    color: '#fff1f5', // Light pink
+    images: phoneImages.buyback,
   },
   {
-    title: 'Exchange Offers',
-    color: '#80d8ff', // cyan
-    imageUrl: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80',
+    title: 'Exchange\nOffers',
+    color: '#e0f2f1', // Light teal
+    images: phoneImages.exchange,
   },
   {
-    title: 'Refurbished Device Offers',
-    color: '#ce93d8', // purple
-    imageUrl: 'https://images.unsplash.com/photo-1607936854279-55e8a4c64888?auto=format&fit=crop&q=80',
+    title: 'Refurbished\nDevice\nOffers',
+    color: '#f3e5f5', // Light purple
+    images: phoneImages.refurbished,
   },
   {
-    title: 'Repair Offers',
-    color: '#fff59d', // yellow
-    imageUrl: 'https://images.unsplash.com/photo-1516387938699-a93567ec168e?auto=format&fit=crop&q=80',
+    title: 'Repair\nOffers',
+    color: '#fffde7', // Light yellow
+    images: phoneImages.repair,
   },
-  // Add more if needed
 ];
 
 const HotDealsSection: React.FC = () => {
-  const theme = useTheme();
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -300, behavior: 'smooth' });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 300, behavior: 'smooth' });
-    }
-  };
-
   return (
-    <Box sx={{ py: 4, px: 2, bgcolor: 'background.default' }}>
-      {/* Header */}
-      <Box sx={{ textAlign: 'center', mb: 4 }}>
-        <Typography variant="h4" fontWeight="bold">
-          Hot Deals
-        </Typography>
-        <Typography variant="subtitle1" color="text.secondary">
-          Exciting offers for more value
-        </Typography>
-      </Box>
+    <Box sx={{ bgcolor: '#f5f5f5', p: { xs: 2, md: 4 }, borderRadius: 2 }}>
+      <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 1 }}>
+        Hot Deals
+      </Typography>
+      <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
+        Exciting offers for more value
+      </Typography>
 
-      {/* Carousel-like horizontal scroll container */}
-      <Box sx={{ position: 'relative' }}>
-        {/* Left Arrow */}
-        <IconButton
-          onClick={scrollLeft}
-          sx={{
-            position: 'absolute',
-            left: -20,
-            top: '50%',
-            transform: 'translateY(-50%)',
-            zIndex: 10,
-            bgcolor: 'background.paper',
-            boxShadow: 3,
-            '&:hover': { bgcolor: 'grey.200' },
-            display: { xs: 'none', md: 'flex' }, // hide on mobile if you want
-          }}
-        >
-          <ArrowBackIosNewIcon />
-        </IconButton>
-
-        {/* Scrollable content */}
-        <Box
-          ref={scrollRef}
-          sx={{
-            display: 'flex',
-            overflowX: 'auto',
-            gap: 3,
-            pb: 2,
-            scrollSnapType: 'x mandatory',
-            scrollbarWidth: 'none', // hide scrollbar Firefox
-            '&::-webkit-scrollbar': { display: 'none' }, // hide scrollbar Chrome/Safari
-            px: { xs: 2, md: 0 },
-          }}
-        >
-          {deals.map((deal, index) => (
-            <Card
-              key={index}
+      <Grid container spacing={3}>
+        {deals.map((deal, index) => (
+          <Grid item xs={12} sm={6} md={3} key={index}>
+            <Paper
+              elevation={0}
               sx={{
-                minWidth: 280,
-                maxWidth: 320,
-                flexShrink: 0,
-                borderRadius: 4,
-                overflow: 'hidden',
                 bgcolor: deal.color,
-                color: 'white',
+                borderRadius: 3,
+                p: 2,
+                height: 220,
                 position: 'relative',
-                scrollSnapAlign: 'start',
-                transition: 'transform 0.3s',
-                '&:hover': { transform: 'scale(1.05)' },
-                boxShadow: 4,
+                display: 'flex',
+                flexDirection: 'column',
+                overflow: 'hidden',
               }}
             >
-              {/* Gradient overlay for text readability */}
-              <Box
+              <Typography
+                variant="h6"
                 sx={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: 'linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.6) 100%)',
-                }}
-              />
-
-              {/* Image */}
-              <Box
-                component="img"
-                src={deal.imageUrl}
-                alt={deal.title}
-                sx={{
-                  width: '100%',
-                  height: 280,
-                  objectFit: 'cover',
-                  objectPosition: 'center',
-                }}
-              />
-
-              {/* Text + arrow */}
-              <CardContent
-                sx={{
-                  position: 'absolute',
-                  bottom: 16,
-                  left: 16,
-                  right: 16,
-                  p: 0,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
+                  fontWeight: 'bold',
+                  lineHeight: 1.2,
+                  whiteSpace: 'pre-line',
                 }}
               >
-                <Typography variant="h6" fontWeight="bold">
-                  {deal.title}
-                </Typography>
-                <IconButton sx={{ color: 'white', bgcolor: 'rgba(255,255,255,0.2)' }}>
-                  <ArrowForwardIosIcon fontSize="small" />
-                </IconButton>
-              </CardContent>
-            </Card>
-          ))}
-        </Box>
+                {deal.title}
+              </Typography>
 
-        {/* Right Arrow */}
-        <IconButton
-          onClick={scrollRight}
-          sx={{
-            position: 'absolute',
-            right: -20,
-            top: '50%',
-            transform: 'translateY(-50%)',
-            zIndex: 10,
-            bgcolor: 'background.paper',
-            boxShadow: 3,
-            '&:hover': { bgcolor: 'grey.200' },
-            display: { xs: 'none', md: 'flex' },
-          }}
-        >
-          <ArrowForwardIosIcon />
-        </IconButton>
-      </Box>
+              {/* Images stacked with overlap at bottom-right */}
+              <Box
+                sx={{
+                  mt: 'auto',
+                  display: 'flex',
+                  justifyContent: 'flex-end',
+                  alignItems: 'flex-end',
+                  position: 'relative',
+                  height: 120,
+                }}
+              >
+                {deal.images.map((src, imgIndex) => (
+                  <Box
+                    key={imgIndex}
+                    component="img"
+                    src={src}
+                    alt="Phone"
+                    sx={{
+                      width: 70,
+                      height: 140,
+                      objectFit: 'cover',
+                      borderRadius: 1,
+                      boxShadow: 1,
+                      ml: imgIndex > 0 ? -3 : 0, // Overlap
+                      zIndex: deal.images.length - imgIndex,
+                    }}
+                  />
+                ))}
+              </Box>
+
+              {/* Arrow button */}
+              <IconButton
+                sx={{
+                  position: 'absolute',
+                  bottom: 12,
+                  right: 12,
+                  bgcolor: 'white',
+                  '&:hover': { bgcolor: 'white' },
+                  boxShadow: 1,
+                }}
+                size="small"
+              >
+                <ArrowForwardIcon fontSize="small" />
+              </IconButton>
+            </Paper>
+          </Grid>
+        ))}
+      </Grid>
     </Box>
   );
 };
