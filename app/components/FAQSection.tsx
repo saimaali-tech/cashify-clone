@@ -53,10 +53,12 @@ const FAQSection: React.FC = () => {
               px: 0,
               py: 1,
               minHeight: 'auto',
-              '& .MuiAccordionSummary-content': { my: 0 },
+              '& .MuiAccordionSummary-content': { my: 0, justifyContent: 'center' },
             }}
           >
-            <Typography variant="body1">{question}</Typography>
+            <Typography variant="body1" sx={{ textAlign: 'center', flexGrow: 1 }}>
+              {question}
+            </Typography>
           </AccordionSummary>
           <AccordionDetails sx={{ px: 0, py: 1 }}>
             {/* Placeholder for answer; add real content as needed */}
