@@ -7,6 +7,7 @@ import StoreCards from './components/Storecard';
 import Footer from './components/Footer';
 import Testimonials from './components/Testimonials';
 import BlogSections from './components/BlogSections';
+import HotDealsSection from './components/Hotdeals';
 import { Box } from '@mui/material';  // Add this import
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <StoreCards />
       <Testimonials/>
       <BlogSections/>
+      <HotDealsSection/>
 
       <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         {/* Header / main content */}
