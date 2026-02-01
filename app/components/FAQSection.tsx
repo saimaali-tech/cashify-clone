@@ -26,14 +26,14 @@ const faqData = {
     'Are there any warranties on SmartBuy products?',
   ],
   'Repair/Others': [
-    'How long does a repair take?',
-    'What types of repairs do you offer?',
-    'How can I track my repair status?',
+    'Can I place another exchange order if my previous one was cancelled?',
+    'What happens if my exchange order is cancelled by Cashify?',
+    'Can I appeal Cashify’s decision to cancel my order?',
   ],
 };
 
 const FAQSection: React.FC = () => {
-  const [selectedTab, setSelectedTab] = useState('SellSmart');
+  const [selectedTab, setSelectedTab] = useState('Repair/Others');
 
   const handleTabChange = (event: React.SyntheticEvent, newValue: string) => {
     setSelectedTab(newValue);
@@ -43,7 +43,7 @@ const FAQSection: React.FC = () => {
 
   return (
     <Box sx={{ p: { xs: 2, md: 4 }, bgcolor: 'white' }}>
-      <Box sx={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', mb: 3 }}>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
         <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
           Frequently Asked Questions
         </Typography>
@@ -80,10 +80,10 @@ const FAQSection: React.FC = () => {
               px: 0,
               py: 1,
               minHeight: 'auto',
-              '& .MuiAccordionSummary-content': { my: 0, justifyContent: 'center' },
+              '& .MuiAccordionSummary-content': { my: 0 },
             }}
           >
-            <Typography variant="body1" sx={{ textAlign: 'center', flexGrow: 1 }}>
+            <Typography variant="body1" sx={{ flexGrow: 1 }}>
               {question}
             </Typography>
           </AccordionSummary>
