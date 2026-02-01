@@ -55,7 +55,7 @@ const deals = [
 
 const HotDealsSection: React.FC = () => {
   return (
-    <Box sx={{ bgcolor: '#f5f5f5', p: { xs: 2, md: 4 }, borderRadius: 2 }}>
+    <Box sx={{ bgcolor: '#f5f5f5', p: { xs: 2, md: 4 }, borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 1 }}>
         Hot Deals
       </Typography>
@@ -63,7 +63,7 @@ const HotDealsSection: React.FC = () => {
         Exciting offers for more value
       </Typography>
 
-      <Grid container spacing={3}>
+      <Grid container spacing={3} justifyContent="center">
         {deals.map((deal, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
             <Paper
@@ -90,12 +90,12 @@ const HotDealsSection: React.FC = () => {
                 {deal.title}
               </Typography>
 
-              {/* Images stacked with overlap at bottom-right */}
+              {/* Images stacked with overlap, centered */}
               <Box
                 sx={{
                   mt: 'auto',
                   display: 'flex',
-                  justifyContent: 'flex-end',
+                  justifyContent: 'center',
                   alignItems: 'flex-end',
                   position: 'relative',
                   height: 120,
@@ -113,7 +113,9 @@ const HotDealsSection: React.FC = () => {
                       objectFit: 'cover',
                       borderRadius: 1,
                       boxShadow: 1,
-                      ml: imgIndex > 0 ? -3 : 0, // Overlap
+                      position: 'relative',
+                      left: `${(deal.images.length - 1) * -15}px`, // Adjust overlap for centering
+                      ml: imgIndex === 0 ? `${(deal.images.length - 1) * 15}px` : -3, // Center the stack
                       zIndex: deal.images.length - imgIndex,
                     }}
                   />
