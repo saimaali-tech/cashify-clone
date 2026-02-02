@@ -53,24 +53,24 @@ const deals = [
 
 const HotDealsSection: React.FC = () => {
   return (
-    <Box sx={{ bgcolor: '#f5f5f5', p: { xs: 2, md: 4 }, borderRadius: 2 }}>
+    <Box sx={{ bgcolor: '#f5f5f5', p: { xs: 2, md: 4 }, borderRadius: 3 }}>
       <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 1, textAlign: 'center' }}>
         Hot Deals
       </Typography>
-      <Typography variant="body2" color="text.secondary" sx={{ mb: 4, textAlign: 'center' }}>
+      <Typography variant="body2" color="text.secondary" sx={{ mb: 6, textAlign: 'center' }}>
         Exciting offers for more value
       </Typography>
 
-      <Grid container spacing={3} justifyContent="center">
+      <Grid container spacing={7} justifyContent="center">
         {deals.map((deal, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
             <Paper
               elevation={0}
               sx={{
                 bgcolor: deal.color,
-                borderRadius: 3,
+                borderRadius: 5,
                 p: 2,
-                height: 220,
+                height: 250,
                 position: 'relative',
                 display: 'flex',
                 flexDirection: 'column',
