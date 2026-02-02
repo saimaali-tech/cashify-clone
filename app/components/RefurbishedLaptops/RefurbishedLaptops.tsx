@@ -13,20 +13,20 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 const phoneImages = {
   buyback: [
     '/images/deal1.jpg',
-    '/images/deal2.jpg',
-    '/images/deal3.jpg',
+    // '/images/deal2.jpg',
+    // '/images/deal1.jpg',
   ],
   exchange: [
     '/images/deal2.jpg',
-    '/images/deal3.jpg',
+    // '/images/deal3.jpg',
   ],
   refurbished: [
     '/images/deal1.jpg',
-    '/images/deal2.jpg',
+    // '/images/deal2.jpg',
   ],
   repair: [
     '/images/deal3.jpg',
-    '/images/deal4.jpg', // Used deal4 here to incorporate all provided images
+    // '/images/deal4.jpg', // Used deal4 here to incorporate all provided images
   ],
 };
 
