@@ -1,81 +1,144 @@
-import Image from 'next/image';
-import "./refurbishedlaptops.css"
+import React from 'react';
+import {
+  Box,
+  Typography,
+  Grid,
+  IconButton,
+  Paper,
+} from '@mui/material';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-const RefurbishedLaptops = () => {
-  const laptops = [
-    {
-      logo: 'CASHIFY',
-      stock: '3 left',
-      image: '/images/laptop1.jpg',
-      discount: '₹29,700 OFF',
-      name: 'Apple MacBook Air 2025 A3240 (Apple M4 13.3 Inch...)',
-      sale: 'Republic Day Sale',
-      rating: '4.6 ★',
-      price: '-29% ₹73,299 ₹102,999',
-      withGold: '₹71,245 with GOLD',
-    },
-    {
-      logo: 'SELECT',
-      stock: '3 left',
-      image: '/images/laptop2.jpg',
-      discount: '₹45,000 OFF',
-      name: 'Apple MacBook Air 2024 A3113 (Apple M3 Chip 13.3...)',
-      sale: 'Republic Day Sale',
-      rating: '4.9 ★',
-      price: '-44% ₹59,399 ₹105,299',
-      withGold: '₹57,623 with GOLD',
-    },
-    {
-      logo: 'SELECT',
-      stock: '1 left',
-      image: '/images/laptop3.jpg',
-      discount: '₹50,200 OFF',
-      name: 'Apple MacBook Air 2023 A2941 (Apple M2 Chip 15...)',
-      sale: 'Republic Day Sale',
-      rating: '5.0 ★',
-      price: '-47% ₹56,399 ₹106,599',
-      withGold: '₹54,683 with GOLD',
-    },
-    {
-      logo: 'CASHIFY',
-      stock: '5 left',
-      image: '/images/laptop4.jpg',
-      discount: '₹47,000 OFF',
-      name: 'Apple MacBook Air 2022 A2681 (Apple M2 Chip 13.6...)',
-      sale: 'Republic Day Sale',
-      rating: '4.4 ★',
-      price: '-48% ₹50,499 ₹97,499',
-      withGold: '₹48,901 with GOLD',
-    },
-  ];
+// Use local images from the public folder
+// Assigning the provided images to the deals; repeating/adjusting arrays as needed to match the original structure
+const phoneImages = {
+  buyback: [
+    '/images/deal1.jpg',
+    '/images/deal2.jpg',
+    '/images/deal3.jpg',
+  ],
+  exchange: [
+    '/images/deal2.jpg',
+    '/images/deal3.jpg',
+  ],
+  refurbished: [
+    '/images/deal1.jpg',
+    '/images/deal2.jpg',
+  ],
+  repair: [
+    '/images/deal3.jpg',
+    '/images/deal4.jpg', // Used deal4 here to incorporate all provided images
+  ],
+};
 
+const deals = [
+  {
+    title: 'Buyback\nOffers',
+    color: '#fff1f5',
+    images: phoneImages.buyback,
+  },
+  {
+    title: 'Exchange\nOffers',
+    color: '#e0f2f1',
+    images: phoneImages.exchange,
+  },
+  {
+    title: 'Refurbished\nDevice\nOffers',
+    color: '#f3e5f5',
+    images: phoneImages.refurbished,
+  },
+  {
+    title: 'Repair\nOffers',
+    color: '#fffde7',
+    images: phoneImages.repair,
+  },
+];
+
+const HotDealsSection: React.FC = () => {
   return (
-    <div className="laptop" >
-      <h1>Refurbished Laptops</h1>
-      <div className="laptop-grid">
-        {laptops.map((laptop, index) => (
-          <div key={index} className="laptop-card">
-            <div className="brand-logo">{laptop.logo}</div>
-            <div className="stock-label">{laptop.stock}</div>
-            <Image
-              src={laptop.image}
-              alt={laptop.name}
-              width={200}
-              height={100}
-              className="laptop-image"
-            />
-            <div className="discount">{laptop.discount}</div>
-            <div className="name">{laptop.name}</div>
-            <div className="sale">
-              {laptop.sale} {laptop.rating}
-            </div>
-            <div className="price">{laptop.price}</div>
-            <div className="with-gold">{laptop.withGold}</div>
-          </div>
+    <Box sx={{ bgcolor: '#f5f5f5', p: { xs: 2, md: 4 }, borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 1 }}>
+        Hot Deals
+      </Typography>
+      <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
+        Exciting offers for more value
+      </Typography>
+      <Grid container spacing={3} justifyContent="center">
+        {deals.map((deal, index) => (
+          <Grid item xs={12} sm={6} md={3} key={index}>
+            <Paper
+              elevation={0}
+              sx={{
+                bgcolor: deal.color,
+                borderRadius: 3,
+                p: 2,
+                height: 220,
+                position: 'relative',
+                display: 'flex',
+                flexDirection: 'column',
+                overflow: 'hidden',
+              }}
+            >
+              <Typography
+                variant="h6"
+                sx={{
+                  fontWeight: 'bold',
+                  lineHeight: 1.2,
+                  whiteSpace: 'pre-line',
+                }}
+              >
+                {deal.title}
+              </Typography>
+              {/* Images stacked with overlap, centered */}
+              <Box
+                sx={{
+                  mt: 'auto',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'flex-end',
+                  position: 'relative',
+                  height: 120,
+                }}
+              >
+                {deal.images.map((src, imgIndex) => (
+                  <Box
+                    key={imgIndex}
+                    component="img"
+                    src={src}
+                    alt="Phone"
+                    sx={{
+                      width: 70,
+                      height: 140,
+                      objectFit: 'cover',
+                      borderRadius: 1,
+                      boxShadow: 1,
+                      position: 'relative',
+                      left: `${(deal.images.length - 1) * -15}px`, // Adjust overlap for centering
+                      ml: imgIndex === 0 ? `${(deal.images.length - 1) * 15}px` : -3, // Center the stack
+                      zIndex: deal.images.length - imgIndex,
+                    }}
+                  />
+                ))}
+              </Box>
+              {/* Arrow button */}
+              <IconButton
+                sx={{
+                  position: 'absolute',
+                  bottom: 12,
+                  right: 12,
+                  bgcolor: 'white',
+                  '&:hover': { bgcolor: 'white' },
+                  boxShadow: 1,
+                }}
+                size="small"
+              >
+                <ArrowForwardIcon fontSize="small" />
+              </IconButton>
+            </Paper>
+          </Grid>
         ))}
-      </div>
-    </div>
+      </Grid>
+    </Box>
   );
 };
 
-export default RefurbishedLaptops;
+export default HotDealsSection;
