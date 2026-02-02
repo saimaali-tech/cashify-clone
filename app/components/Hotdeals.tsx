@@ -8,58 +8,56 @@ import {
 } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-// Placeholder phone images from Unsplash (resized for the card)
-// Replace with your own images if needed
+// Local images from public/images folder
 const phoneImages = {
   buyback: [
-    'https://images.unsplash.com/photo-1745848413099-13adc3aaf308?fm=jpg&q=60&w=70&h=140&fit=crop',
-    'https://images.unsplash.com/photo-1598965402089-897ce52e8355?fm=jpg&q=60&w=70&h=140&fit=crop',
-    'https://images.unsplash.com/photo-1557576902-671136754c97?fm=jpg&q=60&w=70&h=140&fit=crop',
+    '/images/deal1.jpg',
+    '/images/deal2.jpg',
   ],
   exchange: [
-    'https://images.unsplash.com/photo-1598965402089-897ce52e8355?fm=jpg&q=60&w=70&h=140&fit=crop',
-    'https://images.unsplash.com/photo-1557576902-671136754c97?fm=jpg&q=60&w=70&h=140&fit=crop',
+    '/images/deal2.jpg',
+    '/images/deal3.jpg',
   ],
   refurbished: [
-    'https://images.unsplash.com/photo-1745848413099-13adc3aaf308?fm=jpg&q=60&w=70&h=140&fit=crop',
-    'https://images.unsplash.com/photo-1598965402089-897ce52e8355?fm=jpg&q=60&w=70&h=140&fit=crop',
+    '/images/deal3.jpg',
+    '/images/deal4.jpg',
   ],
   repair: [
-    'https://images.unsplash.com/photo-1557576902-671136754c97?fm=jpg&q=60&w=70&h=140&fit=crop',
-    'https://images.unsplash.com/photo-1598965402089-897ce52e8355?fm=jpg&q=60&w=70&h=140&fit=crop', // Replace second with a cracked phone image if desired
+    '/images/deal4.jpg',
+    '/images/deal1.jpg',
   ],
 };
 
 const deals = [
   {
     title: 'Buyback\nOffers',
-    color: '#fff1f5', 
+    color: '#fff1f5',
     images: phoneImages.buyback,
   },
   {
     title: 'Exchange\nOffers',
-    color: '#e0f2f1', 
+    color: '#e0f2f1',
     images: phoneImages.exchange,
   },
   {
     title: 'Refurbished\nDevice\nOffers',
-    color: '#f3e5f5', 
+    color: '#f3e5f5',
     images: phoneImages.refurbished,
   },
   {
     title: 'Repair\nOffers',
-    color: '#fffde7', 
+    color: '#fffde7',
     images: phoneImages.repair,
   },
 ];
 
 const HotDealsSection: React.FC = () => {
   return (
-    <Box sx={{ bgcolor: '#f5f5f5', p: { xs: 2, md: 4 }, borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 1 }}>
+    <Box sx={{ bgcolor: '#f5f5f5', p: { xs: 2, md: 4 }, borderRadius: 2 }}>
+      <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 1, textAlign: 'center' }}>
         Hot Deals
       </Typography>
-      <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
+      <Typography variant="body2" color="text.secondary" sx={{ mb: 4, textAlign: 'center' }}>
         Exciting offers for more value
       </Typography>
 
@@ -85,12 +83,13 @@ const HotDealsSection: React.FC = () => {
                   fontWeight: 'bold',
                   lineHeight: 1.2,
                   whiteSpace: 'pre-line',
+                  mb: 1,
                 }}
               >
                 {deal.title}
               </Typography>
 
-              {/* Images stacked with overlap, centered */}
+              {/* Stacked overlapping images */}
               <Box
                 sx={{
                   mt: 'auto',
@@ -98,7 +97,7 @@ const HotDealsSection: React.FC = () => {
                   justifyContent: 'center',
                   alignItems: 'flex-end',
                   position: 'relative',
-                  height: 120,
+                  height: 125,
                 }}
               >
                 {deal.images.map((src, imgIndex) => (
@@ -108,15 +107,14 @@ const HotDealsSection: React.FC = () => {
                     src={src}
                     alt="Phone"
                     sx={{
-                      width: 70,
+                      width: 72,
                       height: 140,
                       objectFit: 'cover',
-                      borderRadius: 1,
-                      boxShadow: 1,
-                      position: 'relative',
-                      left: `${(deal.images.length - 1) * -15}px`, // Adjust overlap for centering
-                      ml: imgIndex === 0 ? `${(deal.images.length - 1) * 15}px` : -3, // Center the stack
+                      borderRadius: 1.5,
+                      boxShadow: 2,
+                      position: 'absolute',
                       zIndex: deal.images.length - imgIndex,
+                      left: imgIndex === 0 ? '15%' : '30%',
                     }}
                   />
                 ))}
@@ -130,7 +128,7 @@ const HotDealsSection: React.FC = () => {
                   right: 12,
                   bgcolor: 'white',
                   '&:hover': { bgcolor: 'white' },
-                  boxShadow: 1,
+                  boxShadow: 2,
                 }}
                 size="small"
               >

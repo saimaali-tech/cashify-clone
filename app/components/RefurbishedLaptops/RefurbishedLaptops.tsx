@@ -13,16 +13,16 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 const phoneImages = {
   buyback: [
     '/images/deal1.jpg',
-    // '/images/deal2.jpg',
-    // '/images/deal1.jpg',
+    '/images/deal2.jpg',
+    '/images/deal1.jpg',
   ],
   exchange: [
     '/images/deal2.jpg',
-    // '/images/deal3.jpg',
+    '/images/deal3.jpg',
   ],
   refurbished: [
     '/images/deal1.jpg',
-    // '/images/deal2.jpg',
+    '/images/deal2.jpg',
   ],
   repair: [
     '/images/deal3.jpg',
@@ -55,8 +55,8 @@ const deals = [
 
 const HotDealsSection: React.FC = () => {
   return (
-    <Box sx={{ bgcolor: '#f5f5f5', p: { xs: 3, md: 5 }, borderRadius: 4, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2 }}>
+    <Box sx={{ bgcolor: '#f5f5f5', p: { xs: 2, md: 4 }, borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 1 }}>
         Hot Deals
       </Typography>
       <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
@@ -70,8 +70,8 @@ const HotDealsSection: React.FC = () => {
               sx={{
                 bgcolor: deal.color,
                 borderRadius: 3,
-                p: 4  ,
-                height: 260,
+                p: 2,
+                height: 220,
                 position: 'relative',
                 display: 'flex',
                 flexDirection: 'column',
@@ -106,8 +106,8 @@ const HotDealsSection: React.FC = () => {
                     src={src}
                     alt="Phone"
                     sx={{
-                      width: 90,
-                      height: 180,
+                      width: 70,
+                      height: 140,
                       objectFit: 'cover',
                       borderRadius: 1,
                       boxShadow: 1,
