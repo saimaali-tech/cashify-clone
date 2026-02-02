@@ -11,7 +11,7 @@ import {
 
 const trendingArticles = [
   {
-    image: '/images/Samsung-Galaxy.jpg', // Assuming this for Moto G77 (replace if needed)
+    image: '/images/Samsung-Galaxy.jpg', // For Moto G77
     title: 'Moto G77 Camera Specs, Battery, and Performance: See All Details Here',
     description:
       'Moto G77. Yes, finally, Motorola has just dropped a camera maestro! Yes, finally, Motorola has launched a great camera value for the budget segment. Motorola is coming up with the new Moto G77. The phone got announced this week, and in just two days, the whole social media community started talking about this phone. This phone is among the...',
@@ -33,7 +33,30 @@ const trendingArticles = [
   },
 ];
 
-const TrendingArticlesSection: React.FC = () => {
+const recentArticles = [
+  {
+    image: '/images/Apple.jpg',
+    title: 'Cheapest Country To Buy MacBook In 2026: Global Price Comparison',
+    date: '29th Jan 2026',
+  },
+  {
+    image: '/images/OnePlus-Phone.jpg',
+    title: 'How To Switch Off OnePlus Phone: A Quick Guide!',
+    date: '29th Jan 2026',
+  },
+  {
+    image: '/images/Exynos.jpg',
+    title: 'Exynos 2700 VS Exynos 2600: Which Upcoming Samsung Chipset Is The Best?',
+    date: '29th Jan 2026',
+  },
+  {
+    image: '/images/OnePlus-15T.jpg',
+    title: 'OnePlus 15T Features, Price And Launch Date In India!',
+    date: '28th Jan 2026',
+  },
+];
+
+const ArticlesSection: React.FC = () => {
   return (
     <Box
       sx={{
@@ -44,9 +67,10 @@ const TrendingArticlesSection: React.FC = () => {
         flexDirection: 'column',
         alignItems: 'center',
         maxWidth: '1200px',
-        mx: 'auto', // Center the entire section horizontally
+        mx: 'auto',
       }}
     >
+      {/* Trending Articles */}
       <Box
         sx={{
           display: 'flex',
@@ -63,7 +87,7 @@ const TrendingArticlesSection: React.FC = () => {
           See all
         </Button>
       </Box>
-      <Grid container spacing={3} justifyContent="center">
+      <Grid container spacing={3} justifyContent="center" sx={{ mb: 4 }}>
         {trendingArticles.map((article, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card
@@ -96,8 +120,47 @@ const TrendingArticlesSection: React.FC = () => {
           </Grid>
         ))}
       </Grid>
+
+      {/* Recent Articles */}
+      <Grid container spacing={3} justifyContent="center">
+        {recentArticles.map((article, index) => (
+          <Grid item xs={12} sm={6} md={3} key={index}>
+            <Card
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                boxShadow: 0,
+                borderRadius: 2,
+                bgcolor: 'transparent',
+                height: 120,
+              }}
+            >
+              <CardMedia
+                component="img"
+                sx={{
+                  width: 120,
+                  height: 80,
+                  objectFit: 'cover',
+                  borderRadius: 2,
+                  mr: 2,
+                }}
+                image={article.image}
+                alt={article.title}
+              />
+              <CardContent sx={{ p: 0, flex: 1 }}>
+                <Typography variant="subtitle1" sx={{ fontWeight: 'bold', mb: 0.5, lineHeight: 1.2 }}>
+                  {article.title}
+                </Typography>
+                <Typography variant="caption" color="text.secondary">
+                  {article.date}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
     </Box>
   );
 };
 
-export default TrendingArticlesSection;
+export default ArticlesSection;
