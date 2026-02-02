@@ -122,24 +122,25 @@ const ArticlesSection: React.FC = () => {
       </Grid>
 
       {/* Recent Articles */}
-      <Grid container spacing={3} justifyContent="center">
+      <Grid container spacing={7} justifyContent="center">
         {recentArticles.map((article, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index}>
+          <Grid item xs={12} sm={6} md={6} key={index}>
             <Card
               sx={{
-                display: 'flex',
+                // display: 'flex',
                 alignItems: 'center',
                 boxShadow: 0,
-                borderRadius: 2,
+                borderRadius: 3,
                 bgcolor: 'transparent',
-                height: 120,
+                height: 150,
+                
               }}
             >
               <CardMedia
                 component="img"
                 sx={{
-                  width: 120,
-                  height: 80,
+                  width: 150,
+                  height: 100,
                   objectFit: 'cover',
                   borderRadius: 2,
                   mr: 2,
