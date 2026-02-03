@@ -50,7 +50,7 @@ const laptops = [
 
 const RefurbishedLaptops = () => {
   return (
-    <Box sx={{ padding: 2 }}>
+    <Box sx={{ padding: 6 }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
         <Typography variant="h5" component="h2">
           Refurbished Laptops
@@ -59,14 +59,14 @@ const RefurbishedLaptops = () => {
           View All
         </Link>
       </Box>
-      <Box sx={{ display: 'flex', flexDirection: 'row', overflowX: 'auto', gap: 2 }}>
+      <Box sx={{ display: 'flex', flexDirection: 'row', overflowX: 'auto', gap: 4 }}>
         {laptops.map((laptop) => (
-          <Card key={laptop.id} sx={{ minWidth: 200, maxWidth: 200, position: 'relative' }}>
+          <Card key={laptop.id} sx={{ minWidth: 300, maxWidth: 300, position: 'relative' }}>
             {/* Logo - Assuming a placeholder, replace with actual image if needed */}
             <Box
-              component="img"
-              src="https://via.placeholder.com/50?text=CASHIFY" // Replace with actual CASHIFY logo URL
-              alt="CASHIFY"
+              
+              // src="https://via.placeholder.com/50?text=CASHIFY" // Replace with actual CASHIFY logo URL
+              // alt="CASHIFY"
               sx={{ position: 'absolute', top: 8, left: 8, width: 40, height: 40 }}
             />
             <CardMedia
