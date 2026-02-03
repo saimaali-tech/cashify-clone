@@ -67,7 +67,7 @@ const RefurbishedLaptops = () => {
               
               // src="https://via.placeholder.com/50?text=CASHIFY" // Replace with actual CASHIFY logo URL
               // alt="CASHIFY"
-              sx={{ position: 'absolute', top: 8, left: 8, width: 40, height: 40 }}
+              sx={{ position: 'absolute', top: 8, left: 8, width: 30, height: 30 }}
             />
             <CardMedia
               component="img"
