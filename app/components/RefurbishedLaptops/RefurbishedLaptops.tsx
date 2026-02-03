@@ -59,9 +59,9 @@ const RefurbishedLaptops = () => {
           View All
         </Link>
       </Box>
-      <Box sx={{ display: 'flex', flexDirection: 'row', overflowX: 'auto', gap: 4 }}>
+      <Box sx={{ display: 'flex', flexDirection: 'row', overflowX: 'auto', gap: 5 }}>
         {laptops.map((laptop) => (
-          <Card key={laptop.id} sx={{ minWidth: 300, maxWidth: 300, position: 'relative' }}>
+          <Card key={laptop.id} sx={{ minWidth: 200, maxWidth: 200, position: 'relative' }}>
             {/* Logo - Assuming a placeholder, replace with actual image if needed */}
             <Box
               
