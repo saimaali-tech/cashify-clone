@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Grid, Card, CardMedia, CardContent, Link, Rating } from '@mui/material';
+import { Box, Typography, Card, CardMedia, CardContent, Link, Rating } from '@mui/material';
 
 const laptops = [
   {
@@ -59,55 +59,53 @@ const RefurbishedLaptops = () => {
           View All
         </Link>
       </Box>
-      <Grid container spacing={2}>
+      <Box sx={{ display: 'flex', flexDirection: 'row', overflowX: 'auto', gap: 2 }}>
         {laptops.map((laptop) => (
-          <Grid item xs={12} sm={6} md={3} key={laptop.id}>
-            <Card sx={{ position: 'relative' }}>
-              {/* Logo - Assuming a placeholder, replace with actual image if needed */}
-              <Box
-                component="img"
-                src="https://via.placeholder.com/50?text=CASHIFY" // Replace with actual CASHIFY logo URL
-                alt="CASHIFY"
-                sx={{ position: 'absolute', top: 8, left: 8, width: 50, height: 50 }}
-              />
-              <CardMedia
-                component="img"
-                height="200"
-                image={laptop.image}
-                alt={laptop.name}
-              />
-              <CardContent>
-                <Typography variant="h6" color="error" gutterBottom>
-                  {laptop.off}
+          <Card key={laptop.id} sx={{ minWidth: 200, maxWidth: 200, position: 'relative' }}>
+            {/* Logo - Assuming a placeholder, replace with actual image if needed */}
+            <Box
+              component="img"
+              src="https://via.placeholder.com/50?text=CASHIFY" // Replace with actual CASHIFY logo URL
+              alt="CASHIFY"
+              sx={{ position: 'absolute', top: 8, left: 8, width: 40, height: 40 }}
+            />
+            <CardMedia
+              component="img"
+              height="150"
+              image={laptop.image}
+              alt={laptop.name}
+            />
+            <CardContent sx={{ padding: 1 }}>
+              <Typography variant="body2" color="error" gutterBottom>
+                {laptop.off}
+              </Typography>
+              <Typography variant="body2" gutterBottom>
+                {laptop.name}
+              </Typography>
+              <Box sx={{ display: 'flex', alignItems: 'center', mb: 0.5 }}>
+                <Typography variant="caption" sx={{ mr: 0.5 }}>
+                  Lowest Price
                 </Typography>
-                <Typography variant="body1" gutterBottom>
-                  {laptop.name}
+                <Rating value={laptop.rating} precision={0.1} readOnly size="small" />
+              </Box>
+              <Box sx={{ display: 'flex', alignItems: 'center', mb: 0.5 }}>
+                <Typography variant="caption" color="success" sx={{ mr: 0.5 }}>
+                  {laptop.discount}
                 </Typography>
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                  <Typography variant="body2" sx={{ mr: 1 }}>
-                    Lowest Price
-                  </Typography>
-                  <Rating value={laptop.rating} precision={0.1} readOnly size="small" />
-                </Box>
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                  <Typography variant="body2" color="success" sx={{ mr: 1 }}>
-                    {laptop.discount}
-                  </Typography>
-                  <Typography variant="body2" sx={{ textDecoration: 'line-through', mr: 1 }}>
-                    {laptop.originalPrice}
-                  </Typography>
-                  <Typography variant="body2">
-                    {laptop.discountedPrice}
-                  </Typography>
-                </Box>
-                <Typography variant="subtitle1" color="primary">
-                  {laptop.finalPrice}
+                <Typography variant="caption" sx={{ textDecoration: 'line-through', mr: 0.5 }}>
+                  {laptop.originalPrice}
                 </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
+                <Typography variant="caption">
+                  {laptop.discountedPrice}
+                </Typography>
+              </Box>
+              <Typography variant="body2" color="primary">
+                {laptop.finalPrice}
+              </Typography>
+            </CardContent>
+          </Card>
         ))}
-      </Grid>
+      </Box>
     </Box>
   );
 };
