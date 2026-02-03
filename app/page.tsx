@@ -2,7 +2,7 @@ import Carousel from './components/Carousel';
 import Services from './components/Services';
 import Sell from './components/Sell';
 import Refirbished from './components/Refirbished';
-import RefurbishedLaptops from './components/RefurbishedLaptops/RefurbishedLaptops';
+// import RefurbishedLaptops from './components/RefurbishedLaptops/RefurbishedLaptops';
 import StoreCards from './components/Storecard';
 import Footer from './components/Footer';
 import Testimonials from './components/Testimonials';
@@ -19,7 +19,7 @@ export default function Home() {
       <Services />
       <Sell />
       <Refirbished />
-      <RefurbishedLaptops />
+      {/* <RefurbishedLaptops /> */}
       <StoreCards />
       <Testimonials/>
       <BlogSections/>
