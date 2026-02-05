@@ -50,7 +50,7 @@ const laptops = [
 
 const RefurbishedLaptops = () => {
   return (
-    <Box sx={{ padding: 8 }}>
+    <Box sx={{ padding: 8}}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 4 }}>
         <Typography variant="h5" component="h2">
           Refurbished Laptops
