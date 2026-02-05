@@ -87,19 +87,19 @@ const buyRefurbishedData = [
 const sellSmartData = [
   {
     title: 'MacBook Pro 2025 vs MacBook Air 2025: Which Is A Better Resale Choice?',
-    image: 'https://via.placeholder.com/300x140?text=MacBook+Pro+vs+Air', // Replace with actual image URL
+    image: '/images/hyoe1.jpg', // Replace with actual image URL
   },
   {
     title: 'HP Notebook Series vs Lenovo IdeaPad: Retains Value?',
-    image: 'https://via.placeholder.com/300x140?text=HP+vs+Lenovo', // Replace with actual image URL
+    image: '/images/Exynos.jpg', // Replace with actual image URL
   },
   {
     title: 'ZBook Firefly vs ZBook 6 Series vs ZBook 8 Series',
-    image: 'https://via.placeholder.com/300x140?text=ZBook+Series', // Replace with actual image URL
+    image: '/images/OnePlus-15T.jpg', // Replace with actual image URL
   },
   {
     title: 'ZBook 8 Series vs MacBook Pro: Which Is Better Buyback Investment?',
-    image: 'https://via.placeholder.com/300x140?text=ZBook+vs+MacBook', // Replace with actual image URL
+    image: '/images/OnePlus-Phone.jpg', // Replace with actual image URL
   },
 ];
 
