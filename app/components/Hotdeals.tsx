@@ -12,19 +12,19 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 const phoneImages = {
   buyback: [
     '/images/deal1.jpg',
-    '/images/deal2.jpg',
+   
   ],
   exchange: [
     '/images/deal2.jpg',
-    '/images/deal3.jpg',
+  
   ],
   refurbished: [
     '/images/deal3.jpg',
-    '/images/deal4.jpg',
+   
   ],
   repair: [
     '/images/deal4.jpg',
-    '/images/deal1.jpg',
+ 
   ],
 };
 
