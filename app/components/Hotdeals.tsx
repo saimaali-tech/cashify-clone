@@ -107,8 +107,8 @@ const HotDealsSection: React.FC = () => {
                     src={src}
                     alt="Phone"
                     sx={{
-                      width: 72,
-                      height: 140,
+                      width: 1600,
+                      height: 50,
                       objectFit: 'cover',
                       borderRadius: 1.5,
                       boxShadow: 2,
@@ -120,20 +120,7 @@ const HotDealsSection: React.FC = () => {
                 ))}
               </Box>
 
-              {/* Arrow button */}
-              <IconButton
-                sx={{
-                  position: 'absolute',
-                  bottom: 12,
-                  right: 12,
-                  bgcolor: 'white',
-                  '&:hover': { bgcolor: 'white' },
-                  boxShadow: 2,
-                }}
-                size="small"
-              >
-                <ArrowForwardIcon fontSize="small" />
-              </IconButton>
+           
             </Paper>
           </Grid>
         ))}
