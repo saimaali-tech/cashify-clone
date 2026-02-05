@@ -66,8 +66,8 @@ const HotDealsSection: React.FC = () => {
               sx={{
                 bgcolor: deal.color,
                 borderRadius: 5,
-                p: 2,
-                height: 300, // Increased card height
+                p: 9,
+                height: 200, // Increased card height
                 position: 'relative',
                 display: 'flex',
                 flexDirection: 'column',
@@ -92,8 +92,8 @@ const HotDealsSection: React.FC = () => {
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'flex-end',
-                  position: 'relative',
-                  height: 90, // Increased image container height
+                  // position: 'relative',
+                  height: 70, // Increased image container height
                   width:250,
                 }}
               >
