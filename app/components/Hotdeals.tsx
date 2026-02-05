@@ -66,10 +66,13 @@ const HotDealsSection: React.FC = () => {
               sx={{
                 bgcolor: deal.color,
                 borderRadius: 5,
-                p: 9,
+                p: 1,
                 height: 200, // Increased card height
+                width:300,
+                alignItems:'center',
+                justifyItems:'center',
                 position: 'relative',
-                display: 'flex',
+                display: 'grid',
                 flexDirection: 'column',
                 overflow: 'hidden',
               }}
@@ -78,9 +81,9 @@ const HotDealsSection: React.FC = () => {
                 variant="h6"
                 sx={{
                   fontWeight: 'bold',
-                  lineHeight: 1.2,
+                  lineHeight: 1.4,
                   whiteSpace: 'pre-line',
-                  mb: 1,
+                  mb: 2,
                 }}
               >
                 {deal.title}
@@ -92,7 +95,7 @@ const HotDealsSection: React.FC = () => {
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'flex-end',
-                  // position: 'relative',
+                  position: 'relative',
                   height: 70, // Increased image container height
                   width:250,
                 }}
