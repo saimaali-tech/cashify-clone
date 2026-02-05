@@ -68,19 +68,19 @@ const BlogSections = () => {
 const buyRefurbishedData = [
   {
     title: 'Top 5 Refurbished Smartwatches To Buy Right Now',
-    image: 'https://via.placeholder.com/300x140?text=Smartwatches', // Replace with actual image URL
+    image: '/images/deal1.jpg', // Replace with actual image URL
   },
   {
     title: 'What Is Cashify Split Payment? Features, Benefits, All Details',
-    image: 'https://via.placeholder.com/300x140?text=Split+Payment', // Replace with actual image URL
+    image: '/images/deal2.jpg', // Replace with actual image URL
   },
   {
     title: 'Best Refurbished Gaming Laptops You Can Buy Under Rs. 50,000: Top Picks!',
-    image: 'https://via.placeholder.com/300x140?text=Gaming+Laptops', // Replace with actual image URL
+    image: '/images/deal3.jpg', // Replace with actual image URL
   },
   {
     title: 'Surprising Reasons To Get Google Pixel 9 Pro XL Refurbished',
-    image: 'https://via.placeholder.com/300x140?text=Pixel+9+Pro+XL', // Replace with actual image URL
+    image: '/images/deal4.jpg', // Replace with actual image URL
   },
 ];
 
