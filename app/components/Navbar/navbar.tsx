@@ -1,52 +1,64 @@
-'use client';
-import Image from "next/image";
-import Link from "next/link";
-import "./navbar.css";
-import Button from '@mui/material/Button';
-import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
-import { Container } from '@mui/material'; // ← Add this import
-import MegaDropdown from "../MegaDropdown";
+// components/Navbar.js
+import React from 'react';
+import { AppBar, Toolbar, Typography, TextField, InputAdornment, IconButton, Button, Box } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import MegaDropdown from '../MegaDropdown';
 
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <header className="header">
-      {/* Constrain the main navbar content to match other sections (e.g., xl = ~1536px max) */}
-      <Container maxWidth="xl" disableGutters sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
-        <nav className="navbar">
-          {/* Logo */}
-          <Link href="/" className="logo">
-            <Image
-              src="/casifylogo.png"
-              alt="Logo"
-              width={100}
-              height={50}
-              priority
-            />
-          </Link>
+    <AppBar position="static" color="default" elevation={1}>
+      <Toolbar sx={{ justifyContent: 'space-between', padding: '0 16px' }}>
+        {/* Logo */}
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <Typography variant="h6" component="div" sx={{ color: '#00BFA5', fontWeight: 'bold' }}>
+            CASHIFY
+          </Typography>
+        </Box>
 
-          {/* Search Bar */}
-          <div className="search-box">
-            <span className="search-icon">🔍</span>
-            <input
-              type="text"
-              placeholder="Search for mobiles , accessories "
-              className="search-input"
-            />
-          </div>
+        {/* Search Bar */}
+        <TextField
+          variant="outlined"
+          placeholder="Search for mobiles, accessories & More"
+          size="small"
+          sx={{
+            width: '50%',
+            backgroundColor: '#fff',
+            '& .MuiOutlinedInput-root': {
+              borderRadius: '4px',
+            },
+          }}
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <IconButton>
+                  <SearchIcon />
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
+        />
 
-          {/* Region / Location */}
-          <div className="region">
-            <LocationOnSharpIcon style={{ color: 'green' }} />
-            <span className="region-text">Gurgaon</span>
-          </div>
+        {/* Location and Login */}
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+          {/* Location */}
+          <Button
+            startIcon={<LocationOnIcon />}
+            endIcon={<ArrowDropDownIcon />}
+            sx={{ textTransform: 'none', color: '#000' }}
+          >
+            Gurgaon
+          </Button>
 
           {/* Login Button */}
-          <Button variant="outlined">Login</Button>
-        </nav>
-      </Container>
-
-      {/* MegaDropdown placed outside Container so it can span full width if needed (common for mega menus) */}
-      <MegaDropdown />
-    </header>
+          <Button variant="contained" sx={{ backgroundColor: '#00BFA5', textTransform: 'none' }}>
+            Login
+          </Button>
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
-}
+};
+
+export default Navbar;
