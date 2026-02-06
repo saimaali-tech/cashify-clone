@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Box, Typography, Card, CardMedia, CardContent, Link, Rating } from '@mui/material';
 
 const laptops = [
@@ -50,28 +50,26 @@ const laptops = [
 
 const RefurbishedLaptops = () => {
   return (
-    <Box sx={{ padding: 8}}>
+    <Box sx={{ padding: 10}}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 4 }}>
-        <Typography variant="h5" component="h2">
+        <Typography variant="h2" component="h1" >
           Refurbished Laptops
         </Typography>
         <Link href="#" color="primary" underline="hover">
           View All
         </Link>
       </Box>
-      <Box sx={{ display: 'flex', flexDirection: 'row', overflowX: 'auto', gap: 5 }}>
+      <Box sx={{ display: 'flex', flexDirection: 'row', overflowX: 'auto', gap: 3 }}>
         {laptops.map((laptop) => (
-          <Card key={laptop.id} sx={{ minWidth: 200, maxWidth: 200, position: 'relative' }}>
-            {/* Logo - Assuming a placeholder, replace with actual image if needed */}
+          <Card key={laptop.id} sx={{ minWidth: 300, maxWidth: 300, position: 'relative' }}>
+         
             <Box
               
-              // src="https://via.placeholder.com/50?text=CASHIFY" // Replace with actual CASHIFY logo URL
-              // alt="CASHIFY"
-              sx={{ position: 'absolute', top: 8, left: 8, width: 30, height: 30 }}
+             
             />
             <CardMedia
               component="img"
-              height="150"
+              height="100"
               image={laptop.image}
               alt={laptop.name}
             />
