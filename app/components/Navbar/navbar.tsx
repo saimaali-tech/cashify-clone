@@ -1,4 +1,4 @@
-// components/Navbar.js
+
 
 import { AppBar, Toolbar, Typography, TextField, InputAdornment, IconButton, Button, Box } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
@@ -9,8 +9,8 @@ import MegaDropdown from '../MegaDropdown';
 const Navbar = () => {
   return (
     <header>
-      <AppBar position="static" color="default" elevation={1}>
-        <Toolbar sx={{ justifyContent: 'space-between', padding: '0 16px' }}>
+      <AppBar position="static" color="default" elevation={3}>
+        <Toolbar sx={{ justifyContent: 'center', padding: '0 18px' }}>
           {/* Logo */}
           <Box sx={{ display: 'flex', alignItems: 'center', marginRight: 2 }}>
             <Typography variant="h6" component="div" sx={{ color: '#00BFA5', fontWeight: 'bold' }}>
@@ -24,10 +24,10 @@ const Navbar = () => {
             placeholder="Search for mobiles, accessories & More"
             size="small"
             sx={{
-              width: '50%',
+              width: '55%',
               backgroundColor: '#fff',
               '& .MuiOutlinedInput-root': {
-                borderRadius: '4px',
+                borderRadius: '5px',
               },
             }}
             InputProps={{
@@ -42,7 +42,7 @@ const Navbar = () => {
           />
 
           {/* Location and Login */}
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 9 }}>
             {/* Location */}
             <Button
               startIcon={<LocationOnIcon />}
@@ -56,7 +56,7 @@ const Navbar = () => {
             <Button
               variant="contained"
               size="large"
-              sx={{ backgroundColor: '#00BFA5', textTransform: 'none' }}
+              sx={{ backgroundColor: '#00BFA5', textTransform: 'none',width:150, }}
             >
               Login
             </Button>
