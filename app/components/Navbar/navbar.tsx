@@ -4,14 +4,14 @@ import { AppBar, Toolbar, Typography, TextField, InputAdornment, IconButton, But
 import SearchIcon from '@mui/icons-material/Search';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import MegaDropdown from '../MegaDropdown';
+// import MegaDropdown from '../MegaDropdown'; // Uncomment if needed
 
 const Navbar = () => {
   return (
     <AppBar position="static" color="default" elevation={1}>
-      <Toolbar sx={{ justifyContent: 'space-between', padding: '0 16px' }}>
+      <Toolbar sx={{ justifyContent: 'center', padding: '0 16px',width:2000, }}>
         {/* Logo */}
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', marginRight: 2 }}>
           <Typography variant="h6" component="div" sx={{ color: '#00BFA5', fontWeight: 'bold' }}>
             CASHIFY
           </Typography>
@@ -51,8 +51,12 @@ const Navbar = () => {
             Gurgaon
           </Button>
 
-          {/* Login Button */}
-          <Button variant="contained" sx={{ backgroundColor: '#00BFA5', textTransform: 'none' }}>
+          {/* Login Button - Increased size */}
+          <Button
+            variant="contained"
+            size="large"
+            sx={{ backgroundColor: '#00BFA5', textTransform: 'none' }}
+          >
             Login
           </Button>
         </Box>
