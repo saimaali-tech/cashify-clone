@@ -16,7 +16,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="logo">
             <Image
-              src="/image563.jpg"
+              src="/casifylogo.png"
               alt="Logo"
               width={100}
               height={50}
