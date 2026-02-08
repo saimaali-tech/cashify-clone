@@ -59,9 +59,9 @@ const RefurbishedLaptops = () => {
           View All
         </Link>
       </Box>
-      <Box sx={{ display: 'flex', flexDirection: 'row', overflowX: 'auto', gap: 3 }}>
+      <Box sx={{ display: 'flex', flexDirection: 'row', overflowX: 'auto', gap: 5 }}>
         {laptops.map((laptop) => (
-          <Card key={laptop.id} sx={{ minWidth: 300, maxWidth: 300, position: 'relative' }}>
+          <Card key={laptop.id} sx={{ minWidth: 200, maxWidth: 300, position: 'relative' }}>
          
             <Box
               
@@ -80,7 +80,7 @@ const RefurbishedLaptops = () => {
               <Typography variant="body2" gutterBottom>
                 {laptop.name}
               </Typography>
-              <Box sx={{ display: 'flex', alignItems: 'center', mb: 0.5 }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', mb: 0.7 }}>
                 <Typography variant="caption" sx={{ mr: 0.5 }}>
                   Lowest Price
                 </Typography>
