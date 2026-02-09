@@ -9,6 +9,7 @@ import Testimonials from './components/Testimonials';
 import BlogSections from './components/BlogSections';
 import HotDealsSection from './components/Hotdeals';
 import FAQSection from './components/FAQSection';
+import TechNewsAndReviews from './components/TechNewsAndReviews';
 import TrendingArticlesSection from './components/TrendingArticlesSection';
 import { Box } from '@mui/material';  // Add this import
 
@@ -26,6 +27,7 @@ export default function Home() {
       <HotDealsSection/>
       <FAQSection/>
       <TrendingArticlesSection/>
+      <TechNewsAndReviews/>
 
       <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         {/* Header / main content */}
