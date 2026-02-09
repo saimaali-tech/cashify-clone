@@ -8,7 +8,7 @@ const AppDownloadBanner = () => {
     <Container
       maxWidth={false}
       sx={{
-        maxWidth: 1400,
+        maxWidth: 1500,
         mx: 'auto',
         px: { xs: 2, sm: 4 },
         py: { xs: 4, md: 6 },
