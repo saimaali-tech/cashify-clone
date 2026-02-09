@@ -71,7 +71,7 @@ const reviewItems = [
     title: "Realme P4 Power Review: The 10,001mAh Battery Beast",
     desc: "Realme brings massive battery life in the mid-range segment.",
     date: "30th Jan 2026",
-    image: "/images/design-2026-02-03T10225.jpg",
+    image: "/images/1200x600-12-2.jpg",
   },
   {
     id: 3,
@@ -121,7 +121,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
     <Box sx={{ mb: 6, position: 'relative' }}>
       {/* Header */}
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-        <Typography variant="h5" fontWeight={600}>
+        <Typography variant="h3" fontWeight={500}>
           {title}
         </Typography>
         <Typography color="primary" sx={{ cursor: 'pointer', fontWeight: 500 }}>
@@ -164,7 +164,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
             <Card
               key={item.id}
               sx={{
-                minWidth: 280,
+                minWidth: 200,
                 flexShrink: 0,
                 borderRadius: 3,
                 boxShadow: 2,
@@ -174,7 +174,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
             >
               <CardMedia
                 component="img"
-                height="180"
+                height="150"
                 image={item.image}
                 alt={item.title}
                 sx={{ objectFit: 'cover' }}
@@ -218,7 +218,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
 // Main Component
 export default function TechNewsAndReviews() {
   return (
-    <Box sx={{ maxWidth: 1280, mx: 'auto', px: 3, py: 4 }}>
+    <Box sx={{ maxWidth: 1200, mx: 'auto', px: 3, py: 4 }}>
       <HorizontalCarousel items={newsItems} title="Recent News" />
       <HorizontalCarousel items={reviewItems} title="Recent Reviews" />
     </Box>
