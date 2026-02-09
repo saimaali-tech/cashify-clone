@@ -19,42 +19,42 @@ const newsItems = [
     title: "iPhone 17 Drops To Rs 47,742 In Croma Valentine's Day Sale",
     desc: "Croma's Valentine's Day sale brings exciting discounts on electronics...",
     date: "8th Feb 2026",
-    image: "/media/image/news1.jpg", // ← replace with your image
+    image: "/images/1200x600-6-2.jpg", // ← replace with your image
   },
   {
     id: 2,
     title: "HarmonyOS 6 Beta Devices List 2026: Check Supported Phones",
     desc: "Huawei launches HarmonyOS 6 developer beta access for developers...",
     date: "8th Feb 2026",
-    image: "/media/image/news2.jpg",
+    image: "/images/1200x600-8-2.jpg",
   },
   {
     id: 3,
     title: "Google Pixel 9a Gets Massive Price Drop In India Ahead Of Pixel 10a",
     desc: "Google brings exciting news for budget smartphone buyers in India...",
     date: "8th Feb 2026",
-    image: "/media/image/news3.jpg",
+    image: "/images/1200x600-10-2 (1).jpg",
   },
   {
     id: 4,
     title: "Tecno Pova Curve 2 5G To Launch In India Soon: 8000mAh Battery",
     desc: "Tecno Pova Curve 2 launch excites budget smartphone fans in India...",
     date: "8th Feb 2026",
-    image: "/media/image/news4.jpg",
+    image: "/images/1200x600-10-2.jpg",
   },
   {
     id: 5,
     title: "OnePlus 13 Series Launch Date Confirmed",
     desc: "OnePlus is all set to bring flagship killers with Snapdragon 8 Gen 4...",
     date: "7th Feb 2026",
-    image: "https://picsum.photos/id/180/400/250",
+    image: "/images/1200x600-12-2.jpg",
   },
   {
     id: 6,
     title: "Samsung Galaxy S26 Ultra Leaks: Major Camera Upgrade Expected",
     desc: "New leaks suggest 200MP main sensor and improved AI features...",
     date: "6th Feb 2026",
-    image: "https://picsum.photos/id/201/400/250",
+    image: "/images/1200x600-14-1.jpg",
   },
 ];
 
