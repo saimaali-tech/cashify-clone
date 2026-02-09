@@ -153,7 +153,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
           ref={scrollRef}
           sx={{
             display: 'flex',
-            gap: 3,
+            gap: 2,
             overflowX: 'auto',
             scrollBehavior: 'smooth',
             pb: 2,
