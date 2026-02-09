@@ -11,6 +11,7 @@ import HotDealsSection from './components/Hotdeals';
 import FAQSection from './components/FAQSection';
 import TechNewsAndReviews from './components/TechNewsAndReviews';
 import TrendingArticlesSection from './components/TrendingArticlesSection';
+import AppDownloadBanner from './components/AppDownloadBanner';
 import { Box } from '@mui/material';  // Add this import
 
 export default function Home() {
@@ -28,6 +29,8 @@ export default function Home() {
       <FAQSection/>
       <TrendingArticlesSection/>
       <TechNewsAndReviews/>
+      
+  <AppDownloadBanner/>
 
       <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         {/* Header / main content */}
