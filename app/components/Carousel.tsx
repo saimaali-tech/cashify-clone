@@ -23,7 +23,7 @@ const ImageCarousel = () => {
       className="carousel-container"
       style={{
         width: '100%',
-        maxWidth: '1450px', // Optional: cap max width on very large screens
+        maxWidth: '1350px', // Optional: cap max width on very large screens
         margin: '0 auto',   // Center the carousel
         position: 'relative',
       }}
