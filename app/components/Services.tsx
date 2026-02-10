@@ -54,7 +54,7 @@ const Services: React.FC = () => {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              maxWidth: 150,
+              maxWidth: 100,
               width: '100%',
             }}
           >
@@ -80,7 +80,7 @@ const Services: React.FC = () => {
                   src={service.imageSrc}
                   alt={`${service.name} service`}
                   fill
-                  style={{ objectFit: 'contain', padding: '12px' }}
+                  style={{ objectFit: 'contain', padding: '5px' }}
                   sizes="(max-width: 600px) 140px, 150px"
                   priority={index < 4}
                 />
