@@ -1,4 +1,3 @@
-
 import { Box, Typography, Card, CardMedia, CardContent, Link, Rating } from '@mui/material';
 
 const laptops = [
@@ -46,27 +45,32 @@ const laptops = [
     discountedPrice: '₹45,999',
     finalPrice: '₹82,345 with GOLD',
   },
+  
 ];
 
 const RefurbishedLaptops = () => {
   return (
-    <Box sx={{ padding: 10}}>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 4 }}>
-        <Typography variant="h2" component="h1" >
+    <Box 
+      sx={{ 
+        maxWidth: 1650,      // ← Added
+        mx: 'auto',          // ← Centers the component
+        padding: 10,         // You can reduce this if needed (e.g., padding: { xs: 4, md: 10 })
+        width: '100%',  
+             // Ensures it takes full width up to 1400px
+      }}
+    >
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 4 }}>
+        <Typography variant="h4" component="h2">
           Refurbished Laptops
         </Typography>
         <Link href="#" color="primary" underline="hover">
           View All
         </Link>
       </Box>
+
       <Box sx={{ display: 'flex', flexDirection: 'row', overflowX: 'auto', gap: 5 }}>
         {laptops.map((laptop) => (
-          <Card key={laptop.id} sx={{ minWidth: 200, maxWidth: 300, position: 'relative' }}>
-         
-            <Box
-              
-             
-            />
+          <Card key={laptop.id} sx={{ minWidth: 200, maxWidth: 250, position: 'relative' }}>
             <CardMedia
               component="img"
               height="100"
