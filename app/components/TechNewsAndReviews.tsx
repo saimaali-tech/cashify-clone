@@ -136,7 +136,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
           onClick={() => scroll('left')}
           sx={{
             position: 'absolute',
-            left: -20,
+            left: -50,
             top: '50%',
             transform: 'translateY(-50%)',
             zIndex: 10,
@@ -199,7 +199,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
           onClick={() => scroll('right')}
           sx={{
             position: 'absolute',
-            right: -20,
+            right: -50,
             top: '50%',
             transform: 'translateY(-50%)',
             zIndex: 10,
@@ -218,7 +218,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
 // Main Component
 export default function TechNewsAndReviews() {
   return (
-    <Box sx={{ maxWidth: 1200, mx: 'auto', px: 3, py: 4 }}>
+    <Box sx={{ maxWidth: 1300, mx: 'auto', px: 3, py: 4 }}>
       <HorizontalCarousel items={newsItems} title="Recent News" />
       <HorizontalCarousel items={reviewItems} title="Recent Reviews" />
     </Box>
