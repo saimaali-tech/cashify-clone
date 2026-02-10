@@ -1,5 +1,15 @@
 import React from 'react';
-import { Grid, Card, CardContent, Typography, Chip, TextField, InputAdornment, Button } from '@mui/material';
+import { 
+  Box, 
+  Grid, 
+  Card, 
+  CardContent, 
+  Typography, 
+  Chip, 
+  TextField, 
+  InputAdornment, 
+  Button 
+} from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import StarIcon from '@mui/icons-material/Star';
 import SearchIcon from '@mui/icons-material/Search';
@@ -40,7 +50,16 @@ const StoreCards = () => {
   ];
 
   return (
-    <div style={{ backgroundColor: '#f5f5f5', padding: '20px', maxWidth: '1400px', margin: '0 auto' }}>
+    <Box
+      sx={{
+        maxWidth: 1650,
+        mx: 'auto',
+        backgroundColor: '#f5f5f5',
+        padding: { xs: 3, md: 5 },   // Responsive padding (better than fixed 20px)
+        width: '100%',
+      }}
+    >
+      {/* Header */}
       <Grid container justifyContent="space-between" alignItems="center" spacing={2}>
         <Grid item>
           <Typography variant="h5" fontWeight="bold">
@@ -53,7 +72,9 @@ const StoreCards = () => {
           </Button>
         </Grid>
       </Grid>
-      <Grid container alignItems="center" spacing={1} style={{ marginTop: '10px' }}>
+
+      {/* Stats */}
+      <Grid container alignItems="center" spacing={1} sx={{ mt: 2 }}>
         <Grid item>
           <LocationOnIcon color="primary" />
         </Grid>
@@ -67,6 +88,8 @@ const StoreCards = () => {
           <Typography variant="body1">4.5+ Star Rating</Typography>
         </Grid>
       </Grid>
+
+      {/* Search Field */}
       <TextField
         fullWidth
         variant="outlined"
@@ -78,14 +101,36 @@ const StoreCards = () => {
             </InputAdornment>
           ),
         }}
-        style={{ marginTop: '20px', backgroundColor: 'white' }}
+        sx={{ mt: 3, backgroundColor: 'white' }}
       />
-      <Grid container spacing={2} style={{ marginTop: '20px', overflowX: 'auto', flexWrap: 'nowrap' }}>
+
+      {/* Store Cards - Horizontal Scroll */}
+      <Grid 
+        container 
+        spacing={2} 
+        sx={{ 
+          mt: 3, 
+          overflowX: 'auto', 
+          flexWrap: 'nowrap',
+          pb: 2,                    // Extra padding at bottom for scrollbar
+          '&::-webkit-scrollbar': {
+            height: '8px',
+          },
+          '&::-webkit-scrollbar-thumb': {
+            backgroundColor: '#ccc',
+            borderRadius: '4px',
+          }
+        }}
+      >
         {stores.map((store, index) => (
           <Grid item key={index}>
             <Card sx={{ minWidth: 200, maxWidth: 250, boxShadow: 3 }}>
               <CardContent>
-                <Chip label={store.location} color="default" sx={{ backgroundColor: 'black', color: 'white', mb: 1 }} />
+                <Chip 
+                  label={store.location} 
+                  color="default" 
+                  sx={{ backgroundColor: 'black', color: 'white', mb: 1 }} 
+                />
                 <Typography variant="h6" fontWeight="bold">
                   {store.name}
                 </Typography>
@@ -95,7 +140,12 @@ const StoreCards = () => {
                 <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
                   Timings: {store.timings}
                 </Typography>
-                <Button variant="text" color="primary" endIcon={<ArrowForwardIcon />} sx={{ mt: 1 }}>
+                <Button 
+                  variant="text" 
+                  color="primary" 
+                  endIcon={<ArrowForwardIcon />} 
+                  sx={{ mt: 1 }}
+                >
                   View Details
                 </Button>
               </CardContent>
@@ -103,7 +153,7 @@ const StoreCards = () => {
           </Grid>
         ))}
       </Grid>
-    </div>
+    </Box>
   );
 };
 
