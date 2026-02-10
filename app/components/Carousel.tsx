@@ -14,8 +14,8 @@ const ImageCarousel = () => {
     '/images/52177c0b7cd848fd9cfa118f03b468e3.jpg',
     '/images/f68f0353ad894e67a9bec1eea643ebb4.jpg',
     '/images/image3.jpg',
-    '/images/image1.jpg',
-    '/images/image3.jpg',
+    '/images/52177c0b7cd848fd9cfa118f03b468e3.jpg',
+    '/images/f68f0353ad894e67a9bec1eea643ebb4.jpg',
   ];
 
   return (
