@@ -28,7 +28,7 @@ const Sell: React.FC = () => {
 
   return (
     <Container maxWidth="xl" sx={{ my: 6 }}>
-      <Typography variant="h3" component="h2" gutterBottom >
+      <Typography variant="h4" component="h2" gutterBottom >
         Sell Your Old Device Now
       </Typography>
 

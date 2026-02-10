@@ -28,7 +28,7 @@ const services: Service[] = [
 const Services: React.FC = () => {
   return (
     <Container maxWidth="xl" sx={{ my: 4 }}>
-      <Typography variant="h2" component="h2" gutterBottom >
+      <Typography variant="h4" component="h2" gutterBottom >
         Our Services
       </Typography>
 
