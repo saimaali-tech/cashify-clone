@@ -16,11 +16,11 @@ export default function CashifyContent() {
       <Box>
         {/* Main Title */}
         <Typography 
-          variant="h3" 
-          component="h1" 
+          variant="h4" 
+          component="h2" 
           gutterBottom 
-          fontWeight={700}
-          sx={{ mb: 4, fontSize: { xs: '2rem', md: '2.5rem' } }}
+          fontWeight={600}
+          sx={{ mb: 4, fontSize: { xs: '1.5rem', md: '2.5rem' } }}
         >
           Sell Your Old Phone & Buy Old Mobile Phones with Cashify
         </Typography>
