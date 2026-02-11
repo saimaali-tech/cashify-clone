@@ -136,7 +136,7 @@ const ArticlesSection: React.FC = () => {
                 borderRadius: 3,
                 bgcolor: 'transparent',
                 height: 150,
-                maxWidth: 680,           // Keeps cards nicely sized
+                maxWidth: 500,           // Keeps cards nicely sized
                 mx: 'auto',
               }}
             >
