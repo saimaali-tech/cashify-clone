@@ -118,13 +118,13 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
   };
 
   return (
-    <Box sx={{ mb: 6, position: 'relative' }}>
+    <Box sx={{ mb: 4, position: 'relative' }}>
       {/* Header */}
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
         <Typography variant="h3" fontWeight={500}>
           {title}
         </Typography>
-        <Typography color="primary" sx={{ cursor: 'pointer', fontWeight: 500 }}>
+        <Typography color="primary" sx={{ cursor: 'pointer', fontWeight: 400 }}>
           See all →
         </Typography>
       </Box>
@@ -164,7 +164,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
             <Card
               key={item.id}
               sx={{
-                minWidth: 200,
+                minWidth: 60,
                 flexShrink: 0,
                 borderRadius: 3,
                 boxShadow: 2,
@@ -174,7 +174,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
             >
               <CardMedia
                 component="img"
-                height="150"
+                height="100"
                 image={item.image}
                 alt={item.title}
                 sx={{ objectFit: 'cover' }}
@@ -218,7 +218,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
 // Main Component
 export default function TechNewsAndReviews() {
   return (
-    <Box sx={{ maxWidth: 1300, mx: 'auto', px: 3, py: 4 }}>
+    <Box sx={{ maxWidth: 1200, mx: 'auto', px: 3, py: 4 }}>
       <HorizontalCarousel items={newsItems} title="Recent News" />
       <HorizontalCarousel items={reviewItems} title="Recent Reviews" />
     </Box>
