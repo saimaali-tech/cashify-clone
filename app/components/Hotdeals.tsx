@@ -10,19 +10,19 @@ import {
 const phoneImages = {
   buyback: [
     '/images/deal1.jpg',
-    // Add second image if needed: '/images/deal1b.jpg',
+
   ],
   exchange: [
     '/images/deal2.jpg',
-    // Add second: '/images/deal2b.jpg',
+
   ],
   refurbished: [
     '/images/deal3.jpg',
-    // Add second: '/images/deal3b.jpg',
+  
   ],
   repair: [
     '/images/deal4.jpg',
-    // Add second: '/images/deal4b.jpg',
+    
   ],
 };
 
