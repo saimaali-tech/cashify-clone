@@ -52,10 +52,10 @@ const deals = [
 const HotDealsSection: React.FC = () => {
   return (
     <Box sx={{ bgcolor: '#f5f5f5', p: { xs: 2, md: 4 }, borderRadius: 3 }}>
-      <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 1, textAlign: 'center' }}>
+      <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 1, textAlign: 'space-between' }}>
         Hot Deals
       </Typography>
-      <Typography variant="body2" color="text.secondary" sx={{ mb: 6, textAlign: 'center' }}>
+      <Typography variant="body2" color="text.secondary" sx={{ mb: 6, textAlign: 'space-between' }}>
         Exciting offers for more value
       </Typography>
       <Grid container spacing={2} justifyContent="center">
