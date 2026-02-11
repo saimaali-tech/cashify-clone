@@ -8,22 +8,10 @@ import {
 
 // Local images from public/images folder
 const phoneImages = {
-  buyback: [
-    '/images/deal1.jpg',
-
-  ],
-  exchange: [
-    '/images/deal2.jpg',
-
-  ],
-  refurbished: [
-    '/images/deal3.jpg',
-  
-  ],
-  repair: [
-    '/images/deal4.jpg',
-    
-  ],
+  buyback: ['/images/deal1.jpg'],
+  exchange: ['/images/deal2.jpg'],
+  refurbished: ['/images/deal3.jpg'],
+  repair: ['/images/deal4.jpg'],
 };
 
 const deals = [
@@ -51,13 +39,22 @@ const deals = [
 
 const HotDealsSection: React.FC = () => {
   return (
-    <Box sx={{ bgcolor: '#f5f5f5', p: { xs: 2, md: 4 }, borderRadius: 3 }}>
-      <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 1, textAlign: 'space-between' }}>
+    <Box
+      sx={{
+        maxWidth: 1400,     // ← Added
+        mx: 'auto',         // ← Centers the component
+        bgcolor: '#f5f5f5',
+        p: { xs: 2, md: 4 },
+        borderRadius: 3,
+      }}
+    >
+      <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 1 }}>
         Hot Deals
       </Typography>
-      <Typography variant="body2" color="text.secondary" sx={{ mb: 6, textAlign: 'space-between' }}>
+      <Typography variant="body2" color="text.secondary" sx={{ mb: 6 }}>
         Exciting offers for more value
       </Typography>
+
       <Grid container spacing={4} justifyContent="center">
         {deals.map((deal, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
@@ -67,13 +64,10 @@ const HotDealsSection: React.FC = () => {
                 bgcolor: deal.color,
                 borderRadius: 5,
                 p: 1,
-                height: 200, // Increased card height
-                width:300,
-                alignItems:'center',
-                justifyItems:'center',
+                height: 200,
+                width: 300,
                 position: 'relative',
                 display: 'grid',
-                flexDirection: 'column',
                 overflow: 'hidden',
               }}
             >
@@ -88,6 +82,7 @@ const HotDealsSection: React.FC = () => {
               >
                 {deal.title}
               </Typography>
+
               {/* Stacked overlapping images */}
               <Box
                 sx={{
@@ -96,8 +91,8 @@ const HotDealsSection: React.FC = () => {
                   justifyContent: 'center',
                   alignItems: 'flex-end',
                   position: 'relative',
-                  height: 70, // Increased image container height
-                  width:250,
+                  height: 70,
+                  width: 250,
                 }}
               >
                 {deal.images.map((src, imgIndex) => (
@@ -107,15 +102,15 @@ const HotDealsSection: React.FC = () => {
                     src={src}
                     alt="Phone"
                     sx={{
-                      width: 160, // Fixed width (assuming typo from 1600)
-                      height: 120, // Increased height for larger images
-                      objectFit: 'contain', // Better scaling
+                      width: 160,
+                      height: 120,
+                      objectFit: 'contain',
                       borderRadius: 1.5,
                       boxShadow: 2,
                       position: 'absolute',
                       zIndex: deal.images.length - imgIndex,
-                      left: imgIndex === 0 ? '10%' : '25%', // Adjusted for better centering/overlap
-                      transform: imgIndex === 1 ? 'rotate(-5deg)' : 'none', // Optional tilt for dynamic look
+                      left: imgIndex === 0 ? '10%' : '25%',
+                      transform: imgIndex === 1 ? 'rotate(-5deg)' : 'none',
                     }}
                   />
                 ))}
