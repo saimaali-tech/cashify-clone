@@ -124,51 +124,47 @@ const ArticlesSection: React.FC = () => {
       </Grid>
 
       {/* Recent Articles - Now 2 per row, properly centered */}
-      <Box sx={{ width: '100%', maxWidth: 1400 }}>
-        <Grid container spacing={4} justifyContent="center">
-          {recentArticles.map((article, index) => (
-            <Grid item xs={12} sm={6} md={6} key={index}>
-              <Card
+     
+     <Grid container spacing={4} justifyContent="center">
+        {recentArticles.map((article, index) => (
+          <Grid item xs={12} sm={6} md={6} key={index}>
+            <Card
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                boxShadow: 0,
+                borderRadius: 3,
+                bgcolor: 'transparent',
+                height: 150,
+                maxWidth: 680,           // Keeps cards nicely sized
+                mx: 'auto',
+              }}
+            >
+              <CardMedia
+                component="img"
                 sx={{
-                  display: 'flex',           // ← Fixed
-                  alignItems: 'center',
-                  boxShadow: 0,
-                  borderRadius: 3,
-                  bgcolor: 'transparent',
-                  height: 150,
-                  width: '100%',
-                  overflow: 'hidden',
+                  width: 150,
+                  height: 100,
+                  objectFit: 'cover',
+                  borderRadius: 2,
+                  mr: 2,
+                  flexShrink: 0,
                 }}
-              >
-                <CardMedia
-                  component="img"
-                  sx={{
-                    width: 150,
-                    height: 100,
-                    objectFit: 'cover',
-                    borderRadius: 2,
-                    mr: 2,
-                    flexShrink: 0,
-                  }}
-                  image={article.image}
-                  alt={article.title}
-                />
-                <CardContent sx={{ p: 0, flex: 1, pr: 2 }}>
-                  <Typography
-                    variant="subtitle1"
-                    sx={{ fontWeight: 'bold', mb: 0.5, lineHeight: 1.3 }}
-                  >
-                    {article.title}
-                  </Typography>
-                  <Typography variant="caption" color="text.secondary">
-                    {article.date}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
+                image={article.image}
+                alt={article.title}
+              />
+              <CardContent sx={{ p: 0, flex: 1 }}>
+                <Typography variant="subtitle1" sx={{ fontWeight: 'bold', mb: 0.5, lineHeight: 1.3 }}>
+                  {article.title}
+                </Typography>
+                <Typography variant="caption" color="text.secondary">
+                  {article.date}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
     </Box>
   );
 };
