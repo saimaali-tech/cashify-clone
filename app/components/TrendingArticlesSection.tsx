@@ -77,11 +77,11 @@ const ArticlesSection: React.FC = () => {
           justifyContent: 'space-between',
           alignItems: 'center',
           width: '100%',
-          maxWidth: 1400,
+          maxWidth: 1100,
           mb: 3,
         }}
       >
-        <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+        <Typography variant="h4" sx={{ fontWeight: 'bold' }}>
           Trending Articles
         </Typography>
         <Button variant="text" color="primary" size="small">
@@ -143,8 +143,8 @@ const ArticlesSection: React.FC = () => {
               <CardMedia
                 component="img"
                 sx={{
-                  width: 150,
-                  height: 100,
+                  width: 170,
+                  height: 90,
                   objectFit: 'cover',
                   borderRadius: 2,
                   mr: 2,
