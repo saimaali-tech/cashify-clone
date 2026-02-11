@@ -58,7 +58,7 @@ const HotDealsSection: React.FC = () => {
       <Typography variant="body2" color="text.secondary" sx={{ mb: 6, textAlign: 'space-between' }}>
         Exciting offers for more value
       </Typography>
-      <Grid container spacing={2} justifyContent="center">
+      <Grid container spacing={4} justifyContent="center">
         {deals.map((deal, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
             <Paper
