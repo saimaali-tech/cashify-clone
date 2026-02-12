@@ -1,5 +1,5 @@
-// components/Footer.tsx
-import React from 'react';
+
+
 import {
   Box,
   Container,
@@ -37,8 +37,8 @@ const Footer = () => {
           <Image
             src="/image563.jpg"  // Path to your logo in the public folder (e.g., public/logo.png)
             alt="Cashify Logo"
-            width={100}     // Adjust width/height to match the image size/style
-            height={40}
+            width={90}     // Adjust width/height to match the image size/style
+            height={50}
             priority        // Optional: for faster loading
           />
         </Box>
