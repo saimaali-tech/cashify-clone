@@ -106,25 +106,25 @@ export default function CashifyContent() {
           <ListItem sx={{ pl: 0 }}>
             <ListItemText 
               primary="• Assured sale at best price" 
-              sx={{ '& .MuiListItemText-primary': { fontSize: '1.1rem' } }}
+              sx={{ '& .MuiListItemText-primary': { fontSize: '1.2rem' } }}
             />
           </ListItem>
           <ListItem sx={{ pl: 0 }}>
             <ListItemText 
               primary=" • Hassle free" 
-              sx={{ '& .MuiListItemText-primary': { fontSize: '1.1rem' } }}
+              sx={{ '& .MuiListItemText-primary': { fontSize: '1.2rem' } }}
             />
           </ListItem>
            <ListItem sx={{ pl: 0 }}>
             <ListItemText 
               primary=" • Free home pick up" 
-              sx={{ '& .MuiListItemText-primary': { fontSize: '1.1rem' } }}
+              sx={{ '& .MuiListItemText-primary': { fontSize: '1.2rem' } }}
             />
           </ListItem>
             <ListItem sx={{ pl: 0 }}>
             <ListItemText 
               primary=" • Instant cash payment on pickup" 
-              sx={{ '& .MuiListItemText-primary': { fontSize: '1.1rem' } }}
+              sx={{ '& .MuiListItemText-primary': { fontSize: '1.2rem' } }}
             />
           </ListItem>
           
