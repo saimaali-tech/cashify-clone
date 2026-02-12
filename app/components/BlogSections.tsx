@@ -164,7 +164,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
             <Card
               key={item.id}
               sx={{
-                minWidth: 300,
+                minWidth: 100,
                 flexShrink: 0,
                 borderRadius: 3,
                 boxShadow: 2,
@@ -174,7 +174,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
             >
               <CardMedia
                 component="img"
-                height="150"
+                height="100"
                 image={item.image}
                 alt={item.title}
                 sx={{ objectFit: 'cover' }}
@@ -218,7 +218,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
 // Main Component
 export default function TechNewsAndReviews() {
   return (
-    <Box sx={{ maxWidth: 1400, mx: 'auto', px: 1, py: 1}}>
+    <Box sx={{ maxWidth: 1300, mx: 'auto', px: 1, py: 1}}>
       <HorizontalCarousel items={newsItems} title="Better For Pocket. Buy Refurbished" />
       <HorizontalCarousel items={reviewItems} title="Be Smart. Sell Smart" />
     </Box>
