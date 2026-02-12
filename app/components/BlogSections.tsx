@@ -180,7 +180,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
                 sx={{ objectFit: 'cover' }}
               />
               <CardContent>
-                <Typography variant="subtitle1" fontWeight={600} gutterBottom lineHeight={1.3}>
+                <Typography variant="subtitle1" fontWeight={400} gutterBottom lineHeight={1.3}>
                   {item.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
