@@ -153,7 +153,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
           ref={scrollRef}
           sx={{
             display: 'flex',
-            gap: 2,
+            gap: 4,
             overflowX: 'auto',
             scrollBehavior: 'smooth',
             pb: 1,
@@ -166,7 +166,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
               sx={{
                 minWidth: 100,
                 flexShrink: 0,
-                borderRadius: 3,
+                borderRadius: 4,
                 boxShadow: 2,
                 transition: 'transform 0.2s',
                 '&:hover': { transform: 'translateY(-8px)' },
