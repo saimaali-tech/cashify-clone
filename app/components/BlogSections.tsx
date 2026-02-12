@@ -108,8 +108,8 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
-      // Scroll by 2 cards (≈ 2 × (card width + gap))
-      const scrollAmount = 620; // Adjust if needed (280px card + 30px gap × 2)
+   
+      const scrollAmount = 620; 
       scrollRef.current.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth',
@@ -118,7 +118,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
   };
 
   return (
-    <Box sx={{ mb: 3, position: 'relative' }}>
+    <Box sx={{ mb: 6, position: 'relative' }}>
       {/* Header */}
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 6 }}>
         <Typography variant="h3" fontWeight={400}>
@@ -164,7 +164,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
             <Card
               key={item.id}
               sx={{
-                minWidth: 200,
+                minWidth: 300,
                 flexShrink: 0,
                 borderRadius: 3,
                 boxShadow: 2,
@@ -218,9 +218,9 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
 // Main Component
 export default function TechNewsAndReviews() {
   return (
-    <Box sx={{ maxWidth: 1200, mx: 'auto', px: 1, py: 1}}>
-      <HorizontalCarousel items={newsItems} title="Recent News" />
-      <HorizontalCarousel items={reviewItems} title="Recent Reviews" />
+    <Box sx={{ maxWidth: 1400, mx: 'auto', px: 1, py: 1}}>
+      <HorizontalCarousel items={newsItems} title="Better For Pocket. Buy Refurbished" />
+      <HorizontalCarousel items={reviewItems} title="Be Smart. Sell Smart" />
     </Box>
   );
 }
