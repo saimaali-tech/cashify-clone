@@ -8,7 +8,7 @@ export default function CashifyContent() {
       maxWidth="md" 
       sx={{ 
         py: { xs: 6, md: 10 },
-        maxWidth: 900,           // Good readability width
+        maxWidth: 1400,           // Good readability width
         mx: 'auto',
         px: { xs: 3, md: 4 }
       }}
