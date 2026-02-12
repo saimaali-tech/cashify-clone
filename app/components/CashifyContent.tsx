@@ -29,7 +29,7 @@ export default function CashifyContent() {
         <Typography 
           variant="body1" 
           paragraph 
-          sx={{ fontSize: '1.2rem', lineHeight: 1.85, color: '#333' }}
+          sx={{ fontSize: '1.2rem', lineHeight: 1.95, color: '#333' }}
         >
           Cashify is the best platform if you are looking to sell your old mobile phone. It offers a hassle-free experience, and you can sell your old mobile phone in less than five minutes.
         </Typography>
