@@ -48,7 +48,7 @@ export default function CashifyContent() {
           variant="h4" 
           component="h2" 
           gutterBottom 
-          fontWeight={600}
+          fontWeight={400}
           sx={{ mt: 7, mb: 3 }}
         >
           Sell Your Old Phone
