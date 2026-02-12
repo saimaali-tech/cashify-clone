@@ -5,7 +5,7 @@ import { Box, Container, Typography, List, ListItem, ListItemText } from '@mui/m
 export default function CashifyContent() {
   return (
     <Container 
-      maxWidth="md" 
+      // maxWidth="md" 
       sx={{ 
         py: { xs: 6, md: 10 },
         maxWidth: 1600,           // Good readability width
@@ -20,7 +20,7 @@ export default function CashifyContent() {
           component="h2" 
           gutterBottom 
           fontWeight={600}
-          sx={{ mb: 4, fontSize: { xs: '1.5rem', md: '2.5rem' } }}
+          sx={{ mb: 4, fontSize: { xs: '1.6rem', md: '2.5rem' } }}
         >
           Sell Your Old Phone & Buy Old Mobile Phones with Cashify
         </Typography>
