@@ -120,7 +120,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
   return (
     <Box sx={{ mb: 3, position: 'relative' }}>
       {/* Header */}
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 6 }}>
         <Typography variant="h3" fontWeight={400}>
           {title}
         </Typography>
