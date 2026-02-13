@@ -164,7 +164,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
             <Card
               key={item.id}
               sx={{
-                minWidth: 100,
+                minWidth: 90,
                 flexShrink: 0,
                 borderRadius: 4,
                 boxShadow: 2,
