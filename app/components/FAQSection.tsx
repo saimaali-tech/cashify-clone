@@ -55,7 +55,7 @@ const FAQSection: React.FC = () => {
               textTransform: 'none',
               minWidth: 'auto',
               px: 6,
-              py: 0.5,
+              py: 3,
               borderRadius: 20,
               mr: 1,
             },
