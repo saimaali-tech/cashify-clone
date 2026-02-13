@@ -89,7 +89,13 @@ const FAQSection: React.FC = () => {
           </AccordionSummary>
           <AccordionDetails sx={{ px: 2, py: 2 }}>
             {/* Placeholder for answer; add real content as needed */}
-            <Typography>Answer to the question goes here.</Typography>
+            <Typography>If you encounter an error stating that your Amazon voucher has already been redeemed, please follow the steps below to report and resolve the issue:
+
+ Please check your Amazon Pay balance, as the voucher might have already been redeemed. If the amount isn’t reflecting in your account, kindly follow the steps mentioned below.
+File a complaint with the Cyber Crime Department at https://cybercrime.gov.in.
+While filing the complaint, ensure that the complaint notice is submitted under Section 91 of the Cr.PC.
+The Cyber Crime team will forward the complaint to police-inquiries@amazon.com.
+Upon receiving the complaint, the Amazon team will share complete redemption details with the investigating Cyber Crime authority.</Typography>
           </AccordionDetails>
           <Divider />
         </Accordion>
