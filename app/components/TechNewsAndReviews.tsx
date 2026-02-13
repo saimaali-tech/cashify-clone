@@ -218,7 +218,7 @@ const HorizontalCarousel = ({ items, title }: { items: any[]; title: string }) =
 // Main Component
 export default function TechNewsAndReviews() {
   return (
-    <Box sx={{ maxWidth: 1200, mx: 'auto', px: 3, py: 4 }}>
+    <Box sx={{ maxWidth: 1450, mx: 'auto', px: 3, py: 4 }}>
       <HorizontalCarousel items={newsItems} title="Recent News" />
       <HorizontalCarousel items={reviewItems} title="Recent Reviews" />
     </Box>
