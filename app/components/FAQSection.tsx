@@ -54,7 +54,7 @@ const FAQSection: React.FC = () => {
             '& .MuiTab-root': {
               textTransform: 'none',
               minWidth: 'auto',
-              px: 2,
+              px: 6,
               py: 0.5,
               borderRadius: 20,
               mr: 1,
