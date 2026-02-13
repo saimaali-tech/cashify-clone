@@ -44,7 +44,7 @@ const FAQSection: React.FC = () => {
   return (
     <Box sx={{ p: { xs: 2, md: 4 }, bgcolor: 'white' }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
-        <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
+        <Typography variant="h4" sx={{ fontWeight: 'bold' }}>
           Frequently Asked Questions
         </Typography>
         <Tabs
