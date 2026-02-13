@@ -42,11 +42,20 @@ const FAQSection: React.FC = () => {
   const faqs = faqData[selectedTab as keyof typeof faqData];
 
   return (
-    <Box sx={{ p: { xs: 2, md: 4 }, bgcolor: 'white' }}>
+    <Box
+      sx={{
+        maxWidth: 1300,        // ← Max width 1300px
+        mx: 'auto',            // ← Centers the whole section
+        px: { xs: 2, md: 4 },  // ← Horizontal padding (keeps content from touching edges)
+        py: { xs: 4, md: 6 },  // ← Vertical padding (looks better)
+        bgcolor: 'white',
+      }}
+    >
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
         <Typography variant="h4" sx={{ fontWeight: 'bold' }}>
           Frequently Asked Questions
         </Typography>
+
         <Tabs
           value={selectedTab}
           onChange={handleTabChange}
@@ -88,20 +97,25 @@ const FAQSection: React.FC = () => {
             </Typography>
           </AccordionSummary>
           <AccordionDetails sx={{ px: 2, py: 2 }}>
-            {/* Placeholder for answer; add real content as needed */}
-            <Typography>If you encounter an error stating that your Amazon voucher has already been redeemed, please follow the steps below to report and resolve the issue:
-
- Please check your Amazon Pay balance, as the voucher might have already been redeemed. If the amount isn’t reflecting in your account, kindly follow the steps mentioned below.
-File a complaint with the Cyber Crime Department at https://cybercrime.gov.in.
-While filing the complaint, ensure that the complaint notice is submitted under Section 91 of the Cr.PC.
-The Cyber Crime team will forward the complaint to police-inquiries@amazon.com.
-Upon receiving the complaint, the Amazon team will share complete redemption details with the investigating Cyber Crime authority.</Typography>
+            <Typography>
+              If you encounter an error stating that your Amazon voucher has already been redeemed, please follow the steps below to report and resolve the issue:
+              <br /><br />
+              Please check your Amazon Pay balance, as the voucher might have already been redeemed. If the amount isn’t reflecting in your account, kindly follow the steps mentioned below.
+              <br />
+              File a complaint with the Cyber Crime Department at https://cybercrime.gov.in.
+              <br />
+              While filing the complaint, ensure that the complaint notice is submitted under Section 91 of the Cr.PC.
+              <br />
+              The Cyber Crime team will forward the complaint to police-inquiries@amazon.com.
+              <br />
+              Upon receiving the complaint, the Amazon team will share complete redemption details with the investigating Cyber Crime authority.
+            </Typography>
           </AccordionDetails>
           <Divider />
         </Accordion>
       ))}
 
-      <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
         <Link href="#" underline="none" sx={{ color: '#00b3a6', fontWeight: 'medium' }}>
           Load More FAQs
         </Link>
