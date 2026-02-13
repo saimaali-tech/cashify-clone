@@ -41,7 +41,7 @@ const HotDealsSection: React.FC = () => {
   return (
     <Box
       sx={{
-        maxWidth: 2500,     // ← Added
+        maxWidth: 1450,     // ← Added
         mx: 'auto',         // ← Centers the component
         bgcolor: '#f5f5f5',
         p: { xs: 2, md: 4 },
