@@ -87,7 +87,7 @@ const FAQSection: React.FC = () => {
               {question}
             </Typography>
           </AccordionSummary>
-          <AccordionDetails sx={{ px: 0, py: 1 }}>
+          <AccordionDetails sx={{ px: 2, py: 2 }}>
             {/* Placeholder for answer; add real content as needed */}
             <Typography>Answer to the question goes here.</Typography>
           </AccordionDetails>
