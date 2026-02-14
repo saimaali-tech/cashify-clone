@@ -79,11 +79,11 @@ const Footer: React.FC = () => {
       }}
     >
       <Container maxWidth="xl">
-        {/* Main Footer Content */}
+    
         <Grid container spacing={6}>
-          {/* Logo + Social */}
+         
           <Grid item xs={12} md={2}>
-            <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', mb: 4 }}>
               <Typography
                 variant="h5"
                 component="div"
@@ -104,7 +104,7 @@ const Footer: React.FC = () => {
               Follow us on
             </Typography>
 
-            <Box sx={{ display: 'flex', gap: 1.5 }}>
+            <Box sx={{ display: 'flex', gap: 2}}>
               <IconButton
                 component="a"
                 href="https://twitter.com"
