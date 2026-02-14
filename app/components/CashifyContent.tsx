@@ -50,7 +50,7 @@ export default function CashifyContent() {
           variant="h4" 
           component="h2" 
           gutterBottom 
-          fontWeight={400}
+          fontWeight={600}
           sx={{ mt: 7, mb: 3 }}
         >
          Buy Old Mobile Phones
@@ -71,7 +71,7 @@ export default function CashifyContent() {
           variant="h4" 
           component="h2" 
           gutterBottom 
-          fontWeight={400}
+          fontWeight={600}
           sx={{ mt: 7, mb: 3 }}
         >
           Sell Your Old Phone
@@ -83,7 +83,46 @@ export default function CashifyContent() {
           sx={{ fontSize: '1.2rem', lineHeight: 1.85, color: '#333' }}
         >
           Ready to sell old mobile phone? With Cashify, you can easily get cash for your old mobile phone without leaving home. Just share your phone's details, and we'll offer you the best price. It's that simple:
+        </Typography>  
+
+         <Typography 
+          variant="h4" 
+          component="h2" 
+          gutterBottom 
+          fontWeight={600}
+          sx={{ mb: 4, fontSize: { xs: '1.6rem', md: '2.5rem' } }}
+        >
+        How to Buy Old Phone From Cashify
         </Typography>
+
+        {/* First Paragraph */}
+        <Typography 
+          variant="body1" 
+          paragraph 
+          sx={{ fontSize: '1.2rem', lineHeight: 1.95, color: '#333' }}
+        >
+        Buying old mobile phone from Cashify is very easy and convenient. You just need to follow the steps below:
+
+- You can visit the website or App
+
+- Click on the Buy Phone section to select the brand you want to purchase.
+
+- Choose the model and the condition- Fair, Good, Superb. Based on your choice, the price will be displayed on the screen.
+
+- Enter your address and payment mode.
+
+- Make the payment and that’s it! Your device will be delivered to your doorstep.
+
+ 
+
+With Cashify, your privacy is safe. We carefully clean every old phone to ensure that all your data is removed and secured.
+
+
+You don’t need to worry about your old phone’s brand when selling or buying through Cashify. We accept phones from most brands, so selling is easy. Pick the phone category, brand, and model you want to sell. You can also choose your brand from the quick links below
+        </Typography>
+        
+
+
 
         <List sx={{ mt: 2 }}>
           <ListItem sx={{ pl: 0 }}>
