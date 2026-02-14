@@ -34,6 +34,8 @@ export default function CashifyContent() {
           Cashify is the best platform if you are looking to sell your old mobile phone. It offers a hassle-free experience, and you can sell your old mobile phone in less than five minutes.
         </Typography>
 
+
+
         {/* Second Paragraph */}
         <Typography 
           variant="body1" 
@@ -41,6 +43,27 @@ export default function CashifyContent() {
           sx={{ fontSize: '1.2rem', lineHeight: 1.85, color: '#333' }}
         >
           When you sell an old mobile phone with Cashify, you can easily upgrade to a new one. Cashify ensures that the phones you sell are in top condition so that people get good quality when they buy them.
+        </Typography>
+
+
+        <Typography 
+          variant="h4" 
+          component="h2" 
+          gutterBottom 
+          fontWeight={400}
+          sx={{ mt: 7, mb: 3 }}
+        >
+         Buy Old Mobile Phones
+        </Typography>
+
+        <Typography 
+          variant="body1" 
+          paragraph 
+          sx={{ fontSize: '1.2rem', lineHeight: 1.95, color: '#333' }}
+        >
+          Cashify offers an affordable way to upgrade to a new phone. You can explore the vast selection of refurbished phones at low price. With Cashify, you can be assured that you will get a highly functional phone. All refurbished phones are tested with proper quality checks to maintain the quality. On top of that, you get:
+
+
         </Typography>
 
         {/* Sell Your Old Phone Section */}
