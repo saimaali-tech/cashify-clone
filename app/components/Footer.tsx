@@ -165,18 +165,18 @@ const Footer: React.FC = () => {
               <Typography
                 variant="subtitle1"
                 sx={{
-                  fontWeight: 700,
+                  fontWeight: 600,
                   mb: 3,
                   color: '#222',
                   textTransform: 'uppercase',
-                  fontSize: '0.95rem',
-                  letterSpacing: '0.5px',
+                  fontSize: '0.99rem',
+                  letterSpacing: '0.8px',
                 }}
               >
                 {section.title}
               </Typography>
 
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.4 }}>
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.8 }}>
                 {section.links.map((link) => (
                   <MuiLink
                     key={link}
@@ -205,7 +205,7 @@ const Footer: React.FC = () => {
             sx={{
               display: 'flex',
               alignItems: 'center',
-              gap: 2,
+              gap: 4,
               backgroundColor: '#00BFA5',
               color: '#fff',
               borderRadius: 3,
