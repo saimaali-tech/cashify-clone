@@ -329,7 +329,7 @@ const Footer: React.FC = () => {
                   <Box>
                     <Typography
                       variant="body2"
-                      sx={{ fontWeight: 700, color: '#222', mb: 0.5 }}
+                      sx={{ fontWeight: 600, color: '#222', mb: 0.5 }}
                     >
                       Safeguarded by DeviceSafety.org
                     </Typography>
