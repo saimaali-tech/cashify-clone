@@ -73,8 +73,8 @@ const Footer: React.FC = () => {
       sx={{
         backgroundColor: '#f8f9fa',
         color: '#555',
-        pt: 8,
-        pb: 6,
+        pt: 10,
+        pb: 8,
         borderTop: '1px solid #e0e0e0',
       }}
     >
@@ -303,8 +303,8 @@ const Footer: React.FC = () => {
                   {/* Circular Logo (approximated) */}
                   <Box
                     sx={{
-                      width: 64,
-                      height: 64,
+                      width: 60,
+                      height: 60,
                       borderRadius: '50%',
                       border: '3px solid #00BFA5',
                       display: 'flex',
