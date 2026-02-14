@@ -79,6 +79,7 @@ const Footer: React.FC = () => {
       }}
     >
       <Container maxWidth="xl">
+        {/* Main Footer Content */}
         <Grid container spacing={6}>
           {/* Logo + Social */}
           <Grid item xs={12} md={2}>
@@ -232,6 +233,128 @@ const Footer: React.FC = () => {
                 Got questions? Just ask.
               </Typography>
             </Box>
+          </Box>
+        </Box>
+
+        {/* === NEW BOTTOM SECTION === */}
+        <Box sx={{ mt: 10, pt: 5, borderTop: '1px solid #e0e0e0' }}>
+          <Grid container spacing={6} alignItems="flex-start">
+            {/* Registered Office + Disclaimer */}
+            <Grid item xs={12} md={8}>
+              <Typography
+                variant="body2"
+                sx={{ fontWeight: 600, mb: 1, color: '#333' }}
+              >
+                Registered Office:
+              </Typography>
+
+              <Typography
+                variant="caption"
+                sx={{ lineHeight: 1.7, color: '#555', display: 'block' }}
+              >
+                Manak Waste Management Pvt Ltd. | 55, 2nd Floor, Lane-2, Westend
+                Marg, Saidulajab, Near Saket Metro Station, New Delhi-110030,
+                India.
+                <br />
+                Support-7290068900 | CIN: U46524DL2009PTC190441
+                <br />
+                Manak Waste Management Pvt Ltd. Is ISO 27001 &amp; 27701
+                Compliance Certified. Person who may be contacted in case of any
+                compliance related queries or grievances: Manoj Kumar
+                <br />
+                (grievanceofficer@cashify.in)
+              </Typography>
+
+              <Typography
+                variant="caption"
+                sx={{
+                  mt: 4,
+                  display: 'block',
+                  fontStyle: 'italic',
+                  color: '#777',
+                  lineHeight: 1.6,
+                }}
+              >
+                ** All product names, logos, and brands are property of their
+                respective owners. All company, product and service names used in
+                this website are for identification purposes only. Use of these
+                names, logos, and brands does not imply endorsement.
+              </Typography>
+            </Grid>
+
+            {/* Safeguarded by DeviceSafety.org */}
+            <Grid
+              item
+              xs={12}
+              md={4}
+              sx={{ display: 'flex', justifyContent: { xs: 'flex-start', md: 'flex-end' } }}
+            >
+              <Box
+                sx={{
+                  border: '1px solid #e0e0e0',
+                  borderRadius: 2,
+                  p: 2.5,
+                  maxWidth: 300,
+                  backgroundColor: '#fff',
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.04)',
+                }}
+              >
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                  {/* Circular Logo (approximated) */}
+                  <Box
+                    sx={{
+                      width: 64,
+                      height: 64,
+                      borderRadius: '50%',
+                      border: '3px solid #00BFA5',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: 0,
+                      fontSize: '9px',
+                      fontWeight: 'bold',
+                      color: '#00BFA5',
+                      textAlign: 'center',
+                      lineHeight: 1.1,
+                      backgroundColor: '#fff',
+                    }}
+                  >
+                    SAFEGUARDED
+                    <br />
+                    BY
+                    <br />
+                    DEVICESAFETY
+                  </Box>
+
+                  <Box>
+                    <Typography
+                      variant="body2"
+                      sx={{ fontWeight: 700, color: '#222', mb: 0.5 }}
+                    >
+                      Safeguarded by DeviceSafety.org
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      sx={{ lineHeight: 1.5, color: '#555' }}
+                    >
+                      All devices are data-wiped using DeviceSafety.org certified
+                      tools, guaranteeing the highest standards of data security
+                      and privacy.
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </Grid>
+          </Grid>
+
+          {/* Copyright */}
+          <Box sx={{ mt: 6, textAlign: 'center' }}>
+            <Typography
+              variant="caption"
+              sx={{ color: '#999', fontSize: '0.8rem' }}
+            >
+              Copyright © 2026 Cashify All rights reserved
+            </Typography>
           </Box>
         </Box>
       </Container>
